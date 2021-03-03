@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name Capteur_Graphite)(type Legacy)(uri ${KIPRJMOD}/Capteur_Graphite.lib)(options "")(descr ""))
+)
