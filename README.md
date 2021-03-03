@@ -3,7 +3,8 @@
 
   - [Livrables](#livrables)
   - [Schématique](#schématique)
-  - [PCB](#pcb)
+  - [Placement des composants](#placement-des-composants)
+  - [Routage](#routage)
   - [Code Arduino Mesure](#code-arduino-mesure)
   - [Application android APK](#application-android-apk)
   - [Protocole de test du capteur](#protocole-de-test-du-capteur)
@@ -19,7 +20,9 @@
 
 ## Schématique 
 
-## PCB 
+## Placement des composants 
+
+## Routage 
 
 ## Code Arduino Mesure 
 
