@@ -12,11 +12,17 @@
   - [Datasheet capteur graphite](#datasheet-capteur-graphite)
 
 ## Livrables  
-- [ ] PCB shield pluggé sur un microcontrôleur Arduino Uno : amplificateur transimpédance, un module BT, un écran OLED et un encodeur rotatoire. (#PCB Shield)
-- [ ] Code developpé sous Arduino IDE : mesure de la résistance du graphite 2H en fonction de la courbure de la jauge de contrainte et contrôle du module bluetooth, de l'écran OLED et de l'encodeur rotatoire. 
+- [ ] PCB shield 
+- [ ] Code Arduino permettant la mesure de R et le contrôle des fonctionnalités BT, OLED... 
 - [ ] Application android APK réalisé avec MIT APP INVENTOR.
 - [ ] Protocole et le programme Arduino pour le banc de test
 - [ ] Datasheet du capteur de déformation/ jauge de contrainte à base de graphite 2H 
+
+
+A MODIFIER => créer des subtitles pour mettre le schématique, placement, routage et les symboles et empreintes créées sous le titre PCB 
+
+## PCB Shield ##
+Il est pluggé sur un microcontrôleur Arduino Uno : amplificateur transimpédance, un module BT, un écran OLED et un encodeur rotatoire. (#PCB Shield)
 
 ## Schématique 
 
@@ -25,7 +31,7 @@
 ## Routage 
 
 ## Code Arduino Mesure 
-
+Developpé sous Arduino IDE : mesure de la résistance du graphite 2H en fonction de la courbure de la jauge de contrainte et contrôle du module bluetooth, de l'écran OLED et de l'encodeur rotatoire. 
 ## Application android APK
 
 ## Protocole de test du capteur
