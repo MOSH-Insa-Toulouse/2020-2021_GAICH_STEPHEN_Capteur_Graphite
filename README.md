@@ -19,7 +19,7 @@
 
 
 ## PCB Shield
-Il est pluggé sur un microcontrôleur Arduino Uno : amplificateur transimpédance, un module BT, un écran OLED et un encodeur rotatoire. (#PCB Shield)
+Il est pluggé sur un microcontrôleur Arduino Uno : amplificateur transimpédance, un module BT, un écran OLED et un encodeur rotatoire. 
 
 #### Composants créés : symboles & empreintes 
 
