@@ -1,4 +1,4 @@
-update=24/02/2021 19:51:00
+update=07/03/2021 19:55:23
 version=1
 last_client=kicad
 [cvpcb]
@@ -22,7 +22,7 @@ ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=Test_Kicad_AmpliZ.net
+LastNetListRead=PCB_Shield.net
 CopperLayerCount=2
 BoardThickness=1.6
 AllowMicroVias=0
@@ -64,7 +64,7 @@ OthersTextUpright=1
 SolderMaskClearance=0
 SolderMaskMinWidth=0
 SolderPasteClearance=0
-SolderPasteRatio=-0
+SolderPasteRatio=0
 [pcbnew/Layer.F.Cu]
 Name=F.Cu
 Type=0
