@@ -70,10 +70,11 @@ Dans le Eeschema, crée à partir d'un modèle Arduino Uno, nous avons regroupé
 
 #### Placement des composants 
 
-
+![Placement](Images/Placement_1.PNG)
 
 #### Routage 3D
 
+![Routage](Images/Routage_3D_1.PNG) 
 
 
 ## Code Arduino Mesure 
