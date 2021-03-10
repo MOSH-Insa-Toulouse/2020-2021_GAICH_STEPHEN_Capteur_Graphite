@@ -741,10 +741,6 @@ F 3 "" H 4750 5050 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4750 5050 5500 5050
-Text GLabel 8750 2900 0    50   Input ~ 0
-SCL
-Text GLabel 8750 3000 0    50   Input ~ 0
-SDA
 Wire Wire Line
 	8750 2900 9400 2900
 Wire Wire Line
@@ -813,4 +809,8 @@ Wire Wire Line
 NoConn ~ 10550 2500
 Wire Wire Line
 	10200 2500 10550 2500
+Text GLabel 8750 2900 0    50   Input ~ 0
+SDA
+Text GLabel 8750 3000 0    50   Input ~ 0
+SCL
 $EndSCHEMATC
