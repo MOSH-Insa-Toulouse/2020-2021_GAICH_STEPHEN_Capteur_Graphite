@@ -39,9 +39,7 @@ Librairies de composants:
 
 - *Module Bluetooth*
 
-![BT_Symbole](Images/BT_symbole.PNG)
-
-![BT_Empreinte](Images/BT_Empreinte.PNG)
+![BT](Images/BT.PNG)
 
 - *Encodeur rotatoire Keyes KY 040*
 
