@@ -49,7 +49,7 @@ Librairies de composants:
 
 - *Amplificateur LT1050* (Empreinte déjà présente : DIP-8_W7.62mm_LongPads)
 
-![LT1050_Symbole](Images/LT1050.PNG)
+![LT1050](Images/LT1050.PNG)
 
 
 #### Schématique 
