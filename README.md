@@ -33,9 +33,7 @@ Librairies de composants:
 
 - *Capteur Graphique*
 
-![CG_Symbole](Images/Capteur_Graphite_Symbole.PNG)
-
-![CG_Empreinte](Images/Capteur_Graphite_Empreinte.PNG)
+![CG](Images/Capteur_Graphite)
 
 - *Module Bluetooth*
 
@@ -43,21 +41,15 @@ Librairies de composants:
 
 - *Encodeur rotatoire Keyes KY 040*
 
-![Encodeur_Symbole](Images/Encodeur_Rotatoire_Symbole.PNG)
-
-![Encodeur_Empreinte](Images/Encodeur_Rotatoire_Empreinte.PNG)
+![Encodeur](Images/Encodeur_Rotatoire)
 
 - *Ecran OLED*
 
-![Ecran_Symbole](Images/Ecran_OLED_symbole.PNG)
-
-![Ecran_Empreinte](Images/Ecran_OLED_empreinte.PNG)
+![Ecran](Images/Ecran_OLED.PNG)
 
 - *Amplificateur LT1050* (Empreinte déjà présente : DIP-8_W7.62mm_LongPads)
 
-![LT1050_Symbole](Images/LT1050_Symbole.PNG)
-
-![LT1050_Empreinte](Images/LT1050_Empreinte.PNG)
+![LT1050_Symbole](Images/LT1050)
 
 
 #### Schématique 
