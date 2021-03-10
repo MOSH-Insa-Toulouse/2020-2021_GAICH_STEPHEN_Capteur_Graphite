@@ -11,7 +11,7 @@
 
 ## Livrables  
 
-- [ ] PCB shield 
+- [x] PCB shield 
 - [ ] Code Arduino permettant la mesure de R et le contrôle des fonctionnalités BT, OLED... 
 - [ ] Application android APK réalisé avec MIT APP INVENTOR.
 - [ ] Protocole et le programme Arduino pour le banc de test
