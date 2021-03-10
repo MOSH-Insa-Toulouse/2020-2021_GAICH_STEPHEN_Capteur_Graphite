@@ -33,7 +33,7 @@ Librairies de composants:
 
 - *Capteur Graphique*
 
-![CG](Images/Capteur_Graphite)
+![CG](Images/Capteur_Graphite.PNG)
 
 - *Module Bluetooth*
 
@@ -41,7 +41,7 @@ Librairies de composants:
 
 - *Encodeur rotatoire Keyes KY 040*
 
-![Encodeur](Images/Encodeur_Rotatoire)
+![Encodeur](Images/Encodeur_Rotatoire.PNG)
 
 - *Ecran OLED*
 
@@ -49,7 +49,7 @@ Librairies de composants:
 
 - *Amplificateur LT1050* (Empreinte déjà présente : DIP-8_W7.62mm_LongPads)
 
-![LT1050_Symbole](Images/LT1050)
+![LT1050_Symbole](Images/LT1050.PNG)
 
 
 #### Schématique 
@@ -65,6 +65,8 @@ Dans le Eeschema, crée à partir d'un modèle Arduino Uno, nous avons regroupé
 #### Routage 3D
 
 ![Routage](Images/Routage_3D_1.PNG) 
+
+![Routage](Images/Routage_3D_modules.PNG)
 
 
 ## Code Arduino Mesure 
