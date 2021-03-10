@@ -763,9 +763,7 @@ Text Notes 850  4400 0    50   ~ 0
 Modules\n\n
 Text GLabel 10900 2400 2    50   Input ~ 0
 Tx
-Wire Wire Line
-	10200 2700 10550 2700
-Text GLabel 10900 2800 2    50   Input ~ 0
+Text GLabel 10900 2700 2    50   Input ~ 0
 CLK
 Wire Wire Line
 	10200 2800 10900 2800
@@ -773,10 +771,8 @@ Text GLabel 10900 2600 2    50   Input ~ 0
 DATA
 Wire Wire Line
 	10200 2600 10900 2600
-Text GLabel 10900 2500 2    50   Input ~ 0
+Text GLabel 10900 2800 2    50   Input ~ 0
 SWITCH
-Wire Wire Line
-	10200 2500 10900 2500
 Wire Wire Line
 	10200 2400 10900 2400
 Text GLabel 10900 2300 2    50   Input ~ 0
@@ -795,7 +791,6 @@ NoConn ~ 10550 1800
 NoConn ~ 10550 1900
 NoConn ~ 10550 2000
 NoConn ~ 10550 2100
-NoConn ~ 10550 2700
 NoConn ~ 10550 3000
 NoConn ~ 4900 2550
 NoConn ~ 10550 1400
@@ -813,4 +808,9 @@ F 3 "" H 850 2550 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2050 2450 1450 2450
+Wire Wire Line
+	10200 2700 10900 2700
+NoConn ~ 10550 2500
+Wire Wire Line
+	10200 2500 10550 2500
 $EndSCHEMATC
