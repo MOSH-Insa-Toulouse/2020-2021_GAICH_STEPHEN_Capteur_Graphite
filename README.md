@@ -68,6 +68,10 @@ Dans le Eeschema, crée à partir d'un modèle Arduino Uno, nous avons regroupé
 
 ![Routage](Images/Routage_3D_modules.PNG)
 
+#### Soudage du PCB
+
+
+
 
 ## Code Arduino Mesure 
 Developpé sous Arduino IDE : mesure de la résistance du graphite 2H en fonction de la courbure de la jauge de contrainte et contrôle du module bluetooth, de l'écran OLED et de l'encodeur rotatoire. 
