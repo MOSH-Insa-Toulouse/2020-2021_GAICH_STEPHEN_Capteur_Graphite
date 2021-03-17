@@ -11,7 +11,7 @@
 
 ## Livrables  
 
-- [ ] PCB shield 
+- [x] PCB shield 
 - [ ] Code Arduino permettant la mesure de R et le contrôle des fonctionnalités BT, OLED... 
 - [ ] Application android APK réalisé avec MIT APP INVENTOR.
 - [ ] Protocole et le programme Arduino pour le banc de test
@@ -54,7 +54,7 @@ Librairies de composants:
 
 #### Schématique 
 
-Dans le Eeschema, crée à partir d'un modèle Arduino Uno, nous avons regroupé les éléments suivant trois groupes : l'amplificateur transimpédance (circuit analogique qui permet de traiter les données envoyées par le capteur (variation de résistance)), les modules permettant d'ajouter des fonctionnalités au micro-contrôleur (module Bluetooth, encodeur rotatoire, écran OLED) et les broches de la carte Arduino Uno. 
+Dans le Eeschema, crée à partir d'un modèle Arduino Uno, nous avons regroupé les éléments suivant trois groupes : l'amplificateur transimpédance (circuit analogique qui permet de traiter les données envoyées par le capteur (variation de résistance)), les modules permettant d'ajouter des fonctionnalités au micro-contrôleur (module Bluetooth, encodeur rotatoire, écran OLED) et les broches de la carte Arduino Uno.  
 
 ![Schematique](Images/Schématique_all.PNG)
 
@@ -70,11 +70,24 @@ Dans le Eeschema, crée à partir d'un modèle Arduino Uno, nous avons regroupé
 
 #### Soudage du PCB
 
+Grâce à Catherine Crouzet, travaillant au Génie Physique, INSA Toulouse, nous avons pu réaliser le PCB, modélisé sur Kicad, sur une plaquette d'epoxy possedant une fine couche cuivre (60 microns). Après avoir imprimé le typon sur du papier calque, il a été insolé aux UV pendant 2 minutes environ. Cela a permis de déposer une résine protectrice. A l'aide d'un révélateur, le masque de résine non insolée fut retiré. Ensuite, la plaquette d'epoxy a été déposée dans un bain de perchlorure de fer pour être gravée (~7-8minutes). Le cuivre a été "rongé" afin d'obtenir le PCB modélisé. Pour finir, un peu d'acétone est appliquée sur la plaquette afin de retirer la résine. 
 
+![Calque](Images/Calque.PNG)
+
+Passons ensuite au perçage des trous de la plaquette à l'aide d'une perçeuse électrique (voir dossier image)
+- 0.8mm pour ceux de l'AOP, les résistances et les capacités.
+- 1mm pour ceux des connecteurs de l'Arduino et des headers des différents modules (pinces pour la feuille de graphite, bluetooth, encodeur rotatoire, écran OLED)
+- 
+![Perçage](Images/PCB_Perçé.PNG)
+
+Pour finir, nous avons soudé chaque composant à l'aide d'un fer à souder. 
+Remarques: il aurait peut-être fallu faire les pads des connecteurs arduino un peu plus gros afin d'avoir des soudures parfaites => peu de cuivre qui est resté autour après le perçage, ce qui a compliqué la soudure. 
+
+![Soudure](Images/PCB_soudé.PNG)
 
 
 ## Code Arduino Mesure 
-Developpé sous Arduino IDE : mesure de la résistance du graphite 2H en fonction de la courbure de la jauge de contrainte et contrôle du module bluetooth, de l'écran OLED et de l'encodeur rotatoire. 
+Developpé sous Arduino IDE : mesure de la résistance du graphite en fonction de la courbure de la jauge de contrainte et contrôle du module bluetooth, de l'écran OLED et de l'encodeur rotatoire. 
 
 
 ## Application android APK
