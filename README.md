@@ -78,12 +78,12 @@ Passons ensuite au perçage des trous de la plaquette à l'aide d'une perçeuse 
 - 0.8mm pour ceux de l'AOP, les résistances et les capacités.
 - 1mm pour ceux des connecteurs de l'Arduino et des headers des différents modules (pinces pour la feuille de graphite, bluetooth, encodeur rotatoire, écran OLED)
 - 
-![Perçage](Images/PCB_Perçé.PNG)
+![Perçage](Images/PCB_Perçé.png)
 
 Pour finir, nous avons soudé chaque composant à l'aide d'un fer à souder. 
 Remarques: il aurait peut-être fallu faire les pads des connecteurs arduino un peu plus gros afin d'avoir des soudures parfaites => peu de cuivre qui est resté autour après le perçage, ce qui a compliqué la soudure. 
 
-![Soudure](Images/PCB_soudé.PNG)
+![Soudure](Images/PCB_soudé.png)
 
 
 ## Code Arduino Mesure 
