@@ -81,7 +81,8 @@ Passons ensuite au perçage des trous de la plaquette à l'aide d'une perçeuse 
 ![Perçage](Images/PCB_Perçé.png)
 
 Pour finir, nous avons soudé chaque composant à l'aide d'un fer à souder. 
-Remarques: il aurait peut-être fallu faire les pads des connecteurs arduino un peu plus gros afin d'avoir des soudures parfaites => peu de cuivre qui est resté autour après le perçage, ce qui a compliqué la soudure. 
+
+Remarque: il aurait fallu faire le diamètre des pads des connecteurs arduino plus gros afin d'avoir des soudures parfaites => peu de cuivre qui est resté autour après le perçage, ce qui a compliqué la soudure. 
 
 ![Soudure](Images/PCB_soudé.png)
 
