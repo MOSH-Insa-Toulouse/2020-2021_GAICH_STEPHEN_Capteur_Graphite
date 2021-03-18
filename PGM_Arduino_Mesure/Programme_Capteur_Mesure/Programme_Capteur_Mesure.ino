@@ -2,7 +2,7 @@
 unsigned long previousMillis = 0;        // will store last time LED was updated
 
 // constants won't change:
-const long interval = 500;           // interval at which to blink (milliseconds)
+const long interval = 1500;           // interval at which to blink (milliseconds)
 
 
 
@@ -14,9 +14,9 @@ const long interval = 500;           // interval at which to blink (milliseconds
 SoftwareSerial mySerial(rxPin ,txPin); //Definition du software serial
 
 /*//Encodeur rotatoire
-#define encoder0PinA  2  //CLK Output A Do not use other pin for clock as we are using interrupt
+#define encoder0PinA  3  //CLK Output A Do not use other pin for clock as we are using interrupt
 #define encoder0PinB  4  //DT Output B
-#define Switch 5 // Switch connection if available
+#define Switch 2 // Switch connection if available
 
 //OLED
 #include <Wire.h>
@@ -31,9 +31,8 @@ SoftwareSerial mySerial(rxPin ,txPin); //Definition du software serial
 #include <Adafruit_SSD1306.h>
 #include <splash.h>
 
-int OLEDPinSCL = 4;
-int OLEDPinSDA = 5;
-*/
+int OLEDPinSCL = 5;
+int OLEDPinSDA = 4;*/
 
 int capteurgraphitePin = 0;
 
@@ -89,6 +88,7 @@ void loop() {
     mySerial.println(reading);
   }
   /*delay(250);*/
+  
   /*Serial.print("Position:");
   Serial.println (encoder0Pos, DEC);  //Angle = (360 / Encoder_Resolution) * encoder0Pos*/
 }
