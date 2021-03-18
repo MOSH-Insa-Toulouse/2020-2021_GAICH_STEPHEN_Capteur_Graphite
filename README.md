@@ -116,5 +116,5 @@ Developpé sous Arduino IDE : mesure de la résistance du graphite en fonction d
 
 Améliorations : Nouveau PCB. 
 
-![PCB_rectifié](Images/Routage_rectification_OLED_PNG)
+![PCB_rectifié](Images/Routage_rectification_OLED.PNG)
 
