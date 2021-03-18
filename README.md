@@ -109,12 +109,12 @@ Developpé sous Arduino IDE : mesure de la résistance du graphite en fonction d
 
 ## Problèmes rencontrés et améliorations à réaliser
 
-#### * Problèmes sur le PCB
+#### Problèmes sur le PCB
 
 - Pads pour les connecteurs arduino trop fins.
-- Mauvais placement de l'empreinte OLED : En testant l'écran OLED avec un programme fourni dans les libraires arduino, nous nous sommes rendus compte que, par inattention, nous avions mal placé l'empreinte (rotation 180°). Afin d'avoir les bonnes pins, ce dernier doit être placé à l'intérieur. Or il y a l'encodeur rotatoire. Pour palier à ce problème, nous allons utiliser la platine d'expérimentation. 
+- Mauvais placement de l'empreinte OLED : En testant l'écran OLED avec un programme fourni dans les libraires arduino, nous nous sommes rendus compte que, par inattention, nous avions mal placé l'empreinte (rotation 180°) car nous souhaitions que l'écran OLED soit positionné vers l'extérieur (cf PCB 3D). Afin d'avoir les bonnes pins, ce dernier doit être placé à l'intérieur. Or il y a l'encodeur rotatoire. Pour palier à ce problème, nous allons utiliser la platine d'expérimentation. 
 
-Améliorations : Nouveau PCB. 
+  Améliorations : Nouveau PCB. 
 
-![PCB_rectifié](Images/Routage_rectification_OLED.PNG)
+  ![PCB_rectifié](Images/Routage_rectification_OLED.PNG)
 
