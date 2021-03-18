@@ -8,7 +8,7 @@
   - [Protocole de test du capteur](#protocole-de-test-du-capteur)
   - [Code Arduino banc de test](#code-arduino-banc-de-test)
   - [Datasheet capteur graphite](#datasheet-capteur-graphite)
-  - [Problèmes rencontrés et pistes d'améliorations](#problèmes-rencontrés-et-pistes-d-'-améliorations) 
+  - [Problèmes rencontrés et améliorations à réaliser](#problèmes-rencontrés-et-améliorations-à-réaliser) 
 
 ## Livrables  
 
@@ -107,4 +107,4 @@ Developpé sous Arduino IDE : mesure de la résistance du graphite en fonction d
 ## Datasheet capteur graphite
 
 
-## Problèmes rencontrés et pistes d'améliorations
+## Problèmes rencontrés et améliorations à réaliser
