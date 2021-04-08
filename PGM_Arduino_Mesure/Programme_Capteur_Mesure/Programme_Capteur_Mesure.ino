@@ -4,6 +4,11 @@ unsigned long previousMillis = 0;        // will store last time LED was updated
 // constants won't change:
 const long interval = 1000;           // interval at which to blink (milliseconds)
 
+float R1= 100000;
+float R2= 1000;
+float R3= 100000;
+float R5= 10000;
+float Vcc= 5;
 
 
 //Bluetooth
@@ -41,8 +46,7 @@ void setup() {
   // put your setup code here, to run once:
  /* pinMode(OLEDPinSCL, OUTPUT);
   pinMode(OLEDPinSDA, OUTPUT);*/
-  pinMode(rxPin,INPUT);
-  pinMode(txPin,OUTPUT); 
+ 
   mySerial.begin(baudrate);
   Serial.begin(baudrate);
 
@@ -69,11 +73,11 @@ void setup() {
 }
 */
 
-/*float getVoltage(int pin){
+float getVoltage(int pin){
   
   return (analogRead(pin)*(5/1024.0)); //converting from a 0 to 1023 digital range
                                         // to 0 to 5 volts (each 1 reading equals ~ 5 millivolts
-}*/
+}
 
 
   
@@ -83,10 +87,10 @@ void loop() {
    if (currentMillis - previousMillis >= interval) {
     // save the last time you blinked the LED
     previousMillis = currentMillis;
-    float voltage = analogRead(capteurgraphitePin);
-    byte Vadc = map(analogRead(capteurgraphitePin),0,1024,0,255);
+    /*float voltage = getVoltage(capteurgraphitePin);*/
+   byte Vadc = map(analogRead(capteurgraphitePin),0,1024,0,255);
     /*String reading = String(voltage, 5);*/
-    Serial.write(Vadc);
+    Serial.println(Vadc);
     mySerial.write(Vadc);
   }
   /*delay(250);*/

@@ -1,7 +1,0 @@
-Modifier le nombre d'octets du texte
-
-Mettre à jour la valeur de R2/3 envoyé par le OLED sur l'application.
-
-A voir si on veut changer la fréquence d'acquisition => timer 
-
-Peut-être à réflechir sur la modif de la sensibilité avec l'écran OLED ?
