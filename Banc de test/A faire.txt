@@ -6,6 +6,7 @@ Réflechir à des tests à effectuer :
 ou sur encodeur rotatoire (pièce à rajouter type colimasson) 
 -Faire la mesure initiale avec un livre ou avec deux pinces qui le tendent
 
+ATTENTION : mesure de la résistance sans rayon de courbure pour avoir la variation en résistance relative 
 
 Banc de test : Low tech avec dechets 
 - 1ère étape : Ecran OLED : "Demander à l'utilisateur si le BT est connecté" 
