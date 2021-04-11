@@ -1,0 +1,3 @@
+- Mettre l'ordonnée en autoscale
+- Afficher la valeur de la tension mesurée plutot ? 
+- Mettre noms aux axes 
