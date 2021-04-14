@@ -2,6 +2,7 @@
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
+#include "Encoder_Polling_V2.h"
 
 // Variables pour éviter le delay 
 unsigned long previousMillis = 0;        // will store last time LED was updated
@@ -26,19 +27,13 @@ int capteurgraphitePin = 0;
 SoftwareSerial mySerial(rxPin ,txPin); //Definition du software serial
 
 // Rotary Encoder Module connections
-const int PinSW=2;   // Rotary Encoder Switch
-const int PinDT=4;    // DATA signal
-const int PinCLK=3;    // CLOCK signal
+const int pin_A = 3;  // Encoder input pins
+const int pin_B = 4;
+int compteur=0;
+long lastdebouncetime=0;
+long debouncedelay=50;
 
-// Variables to debounce Rotary Encoder
-long TimeOfLastDebounce = 0;
-int DelayofDebounce = 0.1;
 
-// Store previous Pins state
-int PreviousCLK;   
-int PreviousDATA;
-
-int displaycounter=0; // Store current counter value
 
 #define ENC_SW_PIN         2
 byte enc_clk, enc_clk_old;
@@ -57,47 +52,21 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
+  encoder_begin();  // Start the library
+  attach_encoder(0, pin_A, pin_B);  // Attach an encoder to pins A and B
   mySerial.begin(baudrate);
-  PreviousCLK=digitalRead(PinCLK);
-  PreviousDATA=digitalRead(PinDT);
   pinMode (ENC_SW_PIN,INPUT_PULLUP);
   enc_switch_old = digitalRead(ENC_SW_PIN);
+  Serial.println(enc_switch_old);
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
   display.clearDisplay();
   display.setTextSize(1);
-  
   display.setCursor(0, 10);
-
   // Display static text
+  display.display();
  
-
 }
 
-void check_rotary() {
-
- if ((PreviousCLK == 0) && (PreviousDATA == 1)) {
-    if ((digitalRead(PinCLK) == 1) && (digitalRead(PinDT) == 0)) {
-      displaycounter++;
-       Serial.println(displaycounter);
-    }
-    if ((digitalRead(PinCLK) == 1) && (digitalRead(PinDT) == 1)) {
-      displaycounter--;
-       Serial.println(displaycounter);
-    }
-  }
-
-if ((PreviousCLK == 0) && (PreviousDATA == 0)) {
-    if ((digitalRead(PinCLK) == 1) && (digitalRead(PinDT) == 0)) {
-      displaycounter++;
-       Serial.println(displaycounter);
-    }
-    if ((digitalRead(PinCLK) == 1) && (digitalRead(PinDT) == 1)) {
-      displaycounter--;
-           Serial.println(displaycounter);
-    }
-  }
-           
- }
 
 void displaymessage(String message, String highlighted){
   delay(100);
@@ -181,7 +150,6 @@ void buildmenu(int choix){
    display.println("Banc de test carton");
    display.println("Banc de teste imprime");
    display.println("Banc de test sans spe");
-   banc="Banc de test dechets";
    display.display();
   }
   if(choix==1){
@@ -192,7 +160,6 @@ void buildmenu(int choix){
    display.setTextColor(WHITE);
    display.println("Banc de teste imprime");
    display.println("Banc de test sans spe");
-   banc="Banc de test carton";
    display.display();
   }
   if(choix==2){
@@ -203,7 +170,6 @@ void buildmenu(int choix){
    display.println("Banc de teste imprime");
    display.setTextColor(WHITE);
    display.println("Banc de test sans spe");
-   banc="Banc de teste imprime";
    display.display();
   }
   if(choix==3){
@@ -213,7 +179,6 @@ void buildmenu(int choix){
    display.println("Banc de teste imprime");
    display.setTextColor(BLACK,WHITE);
    display.println("Banc de test sans spe");
-   banc="Banc de test sans spe";
    display.display();
   }
   
@@ -351,21 +316,84 @@ float getVoltage(int pin){
                                         // to 0 to 5 volts (each 1 reading equals ~ 5 millivolts
 }
 
+int mainmenu(){
+  int compteurmenu=0;
+  buildmenu(0);
+ enc_switch=digitalRead(ENC_SW_PIN);
+  while(enc_switch ==1){
+  enc_switch=digitalRead(ENC_SW_PIN);
+  int dir_0 = encoder_data(0);  // First encoder
+  if(dir_0!=0){
+  if(millis()-lastdebouncetime>debouncedelay){
+    lastdebouncetime=millis();
+    compteurmenu=compteurmenu+1;
+    Serial.println(compteurmenu);
+  }
+  }
+  if(compteurmenu==4){
+    compteurmenu=compteurmenu-4;
+  }
+  buildmenu(compteurmenu);
+
+  if((enc_switch_old == 1) && (enc_switch == 0)) {// 1->0 transition
+    delay(300);
+    Serial.println(compteurmenu);
+
+    }
+  }
+  return compteurmenu;
+}
+
 
 
 void loop() {
   // put your main code here, to run repeatedly
-   if ((millis() - TimeOfLastDebounce) > DelayofDebounce) {
-    
-    check_rotary(); // Rotary Encoder check routine below
-    if(displaycounter==3){
-      displaycounter= displaycounter-4;
-    }
-    PreviousCLK=digitalRead(PinCLK);
-    PreviousDATA=digitalRead(PinDT);
-    //buildmenu(displaycounter);
-    TimeOfLastDebounce=millis();  // Set variable to current millis() timer
+ /* buildmenu(0);
+ enc_switch=digitalRead(ENC_SW_PIN);
+  while(enc_switch ==1){
+  enc_switch=digitalRead(ENC_SW_PIN);
+  Serial.println(banc);
+  int dir_0 = encoder_data(0);  // First encoder
+  if(dir_0!=0){
+  if(millis()-lastdebouncetime>debouncedelay){
+    lastdebouncetime=millis();
+    compteur=compteur+1;
+    Serial.println(compteur);
   }
-  //buildmenu(2);
+  }
+  if(compteur==4){
+    compteur=compteur-4;
+  }
+  buildmenu(compteur);
 
+  if((enc_switch_old == 1) && (enc_switch == 0)) {// 1->0 transition
+    delay(300);
+    enc_switch=enc_switch_old;
+    Serial.println(compteur);
+    if(compteur== 0){
+      banc="Banc de test dechets";
+      Serial.println(banc);
+    }
+    if(compteur== 1){
+      banc="Banc de test carton";
+    }
+    if(compteur== 2){
+      banc="Banc de teste imprime";
+    }    
+    if(compteur== 3){
+      banc="Banc de test sans spe";
+    }
+  }
+  
+  }*/
+  int res=40;
+  res=mainmenu();
+  Serial.println(res);
+  switch (res){
+    case 0 :
+      submenu1();
+  }
+
+  /*Serial.println("blabla");
+  submenu1();*/
 }
