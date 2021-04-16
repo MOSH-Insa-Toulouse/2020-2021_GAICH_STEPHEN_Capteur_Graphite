@@ -31,7 +31,7 @@ const int pin_A = 3;  // Encoder input pins
 const int pin_B = 4;
 int compteur=0;
 long lastdebouncetime=0;
-long debouncedelay=50;
+long debouncedelay=100;
 
 
 
@@ -64,12 +64,12 @@ void setup() {
   display.setCursor(0, 10);
   // Display static text
   display.display();
+
  
 }
 
 
 void displaymessage(String message, String highlighted){
-  delay(100);
   display.clearDisplay();
   display.setTextSize(1);
   display.setCursor(0, 10);
@@ -185,6 +185,55 @@ void buildmenu(int choix){
   //après choix avec encodeur rotatoire
   
 }
+void buildsubmenu(int choix){
+  display.clearDisplay();
+  display.setTextSize(1);
+  display.setCursor(0, 10);
+  display.setTextColor(WHITE);
+  display.println("Test");
+  if(choix==0){
+   display.setTextColor(BLACK,WHITE);
+   display.println("1cm");
+   display.setTextColor(WHITE);
+   display.println("1.5cm");
+   display.println("2cm");
+   display.println("3cm");
+   display.println("4cm");
+   display.display();
+  }
+  if(choix==1){
+   display.setTextColor(WHITE);
+   display.println("Banc de test dechets");
+   display.setTextColor(BLACK,WHITE);
+   display.println("Banc de test carton");
+   display.setTextColor(WHITE);
+   display.println("Banc de teste imprime");
+   display.println("Banc de test sans spe");
+   display.display();
+  }
+  if(choix==2){
+   display.setTextColor(WHITE);
+   display.println("Banc de test dechets");
+   display.println("Banc de test carton");
+    display.setTextColor(BLACK,WHITE);
+   display.println("Banc de teste imprime");
+   display.setTextColor(WHITE);
+   display.println("Banc de test sans spe");
+   display.display();
+  }
+  if(choix==3){
+   display.setTextColor(WHITE);
+   display.println("Banc de test dechets");
+   display.println("Banc de test carton");
+   display.println("Banc de teste imprime");
+   display.setTextColor(BLACK,WHITE);
+   display.println("Banc de test sans spe");
+   display.display();
+  }
+  
+  //après choix avec encodeur rotatoire
+  
+}
 
 void submenu1(){
   //1er etape
@@ -209,6 +258,12 @@ void submenu1(){
   display.println("Oui");
   display.display();
   buttonclicked();
+/*
+  display.println("Test en compression");
+  display.println("Rayon de courbure: 1cm");
+  display.setTextColor(BLACK,WHITE);
+  display.println("START");
+  display.display();
   displaymessagecompressionrayon("1cm");
   buttonclicked();
   mesure();
@@ -238,7 +293,7 @@ void submenu1(){
   mesure();
   displaymessagetensionrayon("4cm");
   buttonclicked();
-  mesure();
+  mesure();*/
 }
 
 void submenu2(){
@@ -279,10 +334,23 @@ void submenu2(){
 
 void submenu3(){
   //1er etape
-  displaymessage("Le bluetooth est-il connecte?","Oui");
-  enc_switch=digitalRead(ENC_SW_PIN);
+  display.clearDisplay();
+  display.setTextSize(1);
+  display.setCursor(0, 10);
+  display.setTextColor(WHITE);
+  display.println("Le bluetooth est-il connecte?");
+  display.setTextColor(BLACK,WHITE);
+  display.println("Oui");
+  display.display();
   buttonclicked();
-  displaymessage("Etes vous prets?","Oui");
+  display.clearDisplay();
+  display.setTextSize(1);
+  display.setCursor(0, 10);
+  display.setTextColor(WHITE);
+  display.println("Etes vous prets?");
+  display.setTextColor(BLACK,WHITE);
+  display.println("Oui");
+  display.display();
   buttonclicked();
   mesure();
  
@@ -296,11 +364,11 @@ int mesure(){
     // save the last time you blinked the LED
     previousMillis = currentMillis;
    float voltage = getVoltage(capteurgraphitePin);
-   //byte Vadc = map(analogRead(capteurgraphitePin),0,1024,0,255);
+   byte Vadc = map(analogRead(capteurgraphitePin),0,1024,0,255);
     /*String reading = String(voltage, 5);*/
     //Serial.println(voltage);
     displaymessagemesure(voltage,"STOP");
-    //mySerial.write(Vadc);
+    mySerial.write(Vadc);
    }
     if((enc_switch_old == 1) && (enc_switch == 0)) {// 1->0 transition
       delay(300);
@@ -327,7 +395,6 @@ int mainmenu(){
   if(millis()-lastdebouncetime>debouncedelay){
     lastdebouncetime=millis();
     compteurmenu=compteurmenu+1;
-    Serial.println(compteurmenu);
   }
   }
   if(compteurmenu==4){
@@ -337,13 +404,14 @@ int mainmenu(){
 
   if((enc_switch_old == 1) && (enc_switch == 0)) {// 1->0 transition
     delay(300);
-    Serial.println(compteurmenu);
+    if(compteurmenu==0){
+    enc_switch = enc_switch_old;   
+    }
+    return 1;
 
     }
   }
-  return compteurmenu;
 }
-
 
 
 void loop() {
@@ -386,14 +454,9 @@ void loop() {
   }
   
   }*/
-  int res=40;
-  res=mainmenu();
-  Serial.println(res);
-  switch (res){
-    case 0 :
-      submenu1();
-  }
+  /*mainmenu();
+  Serial.print("here");*/
+  mainmenu();
+  submenu3();
 
-  /*Serial.println("blabla");
-  submenu1();*/
 }
