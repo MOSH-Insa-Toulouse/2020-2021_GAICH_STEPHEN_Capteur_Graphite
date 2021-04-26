@@ -6,3 +6,4 @@ Rajouter une partie configuration pour expliquer tout ce que l'utilisateur a bes
 Remerciements ?
 Info auteurs 
 Refaire le sommaire 
+Mettre une partie sur l'elect analogique /!\

@@ -1,3 +1,0 @@
-Ajouter les fonctionnalités menu à l'encodeur rotatoire et OLED.
-Tester le produit
-Mettre au switch => interuption prog qui fait start, pas accès menu jusqu'au switch qui permet arrêt prog et accès au menu
