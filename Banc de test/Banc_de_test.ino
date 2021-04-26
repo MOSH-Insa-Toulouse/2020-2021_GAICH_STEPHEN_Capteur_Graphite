@@ -149,8 +149,9 @@ void buildmenu(int choix){
    display.setTextColor(WHITE);
    display.println("Banc de test carton");
    display.println("Banc de teste imprime");
-   display.println("Banc de test sans spe");
+   display.println("Mesure");
    display.display();
+   banc="Banc de test dechets";
   }
   if(choix==1){
    display.setTextColor(WHITE);
@@ -159,8 +160,9 @@ void buildmenu(int choix){
    display.println("Banc de test carton");
    display.setTextColor(WHITE);
    display.println("Banc de teste imprime");
-   display.println("Banc de test sans spe");
+   display.println("Mesure");
    display.display();
+   banc="Banc de test carton";
   }
   if(choix==2){
    display.setTextColor(WHITE);
@@ -169,8 +171,9 @@ void buildmenu(int choix){
     display.setTextColor(BLACK,WHITE);
    display.println("Banc de teste imprime");
    display.setTextColor(WHITE);
-   display.println("Banc de test sans spe");
+   display.println("Mesure");
    display.display();
+   banc="Banc de test imprimé";
   }
   if(choix==3){
    display.setTextColor(WHITE);
@@ -178,8 +181,9 @@ void buildmenu(int choix){
    display.println("Banc de test carton");
    display.println("Banc de teste imprime");
    display.setTextColor(BLACK,WHITE);
-   display.println("Banc de test sans spe");
+   display.println("Mesure");
    display.display();
+   banc="Mesure";
   }
   
   //après choix avec encodeur rotatoire
@@ -367,7 +371,16 @@ int mesure(){
    byte Vadc = map(analogRead(capteurgraphitePin),0,1024,0,255);
     /*String reading = String(voltage, 5);*/
     //Serial.println(voltage);
-    displaymessagemesure(voltage,"STOP");
+    display.clearDisplay();
+    display.setTextSize(3);
+    display.setCursor(0, 10);
+    display.setTextColor(WHITE);
+    display.print(voltage);
+    display.println("V");
+    display.setTextSize(1);
+    display.setTextColor(BLACK,WHITE);
+    display.println("STOP");
+    display.display();
     mySerial.write(Vadc);
    }
     if((enc_switch_old == 1) && (enc_switch == 0)) {// 1->0 transition
@@ -404,9 +417,9 @@ int mainmenu(){
 
   if((enc_switch_old == 1) && (enc_switch == 0)) {// 1->0 transition
     delay(300);
-    if(compteurmenu==0){
-    enc_switch = enc_switch_old;   
-    }
+    enc_switch = enc_switch_old; 
+    //Serial.write("Envoi bluetooth ici"); 
+    mySerial.print(banc);
     return 1;
 
     }
