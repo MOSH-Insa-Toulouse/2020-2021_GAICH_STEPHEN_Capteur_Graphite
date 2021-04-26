@@ -1,11 +1,3 @@
-Réflechir à des tests à effectuer : 
--Faire varier la longueur de la feuille de graphite 
--Faire varier le support sur lequel on fait les mesures (bristol, feuille papier)
--Faire varier le type de crayon (2H,2B)
--Faire varier le rayon de courbure => refléchir à un support (celui en colimasson pas mal mais peut mieux faire) ou une technique (vis, ?) 
-ou sur encodeur rotatoire (pièce à rajouter type colimasson) 
--Faire la mesure initiale avec un livre ou avec deux pinces qui le tendent
-
 ATTENTION : mesure de la résistance sans rayon de courbure pour avoir la variation en résistance relative 
 
 Banc de test : Low tech avec dechets 
