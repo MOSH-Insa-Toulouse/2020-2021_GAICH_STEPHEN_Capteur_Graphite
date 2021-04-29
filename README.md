@@ -103,7 +103,7 @@ Nous récupérons les données envoyées par le module bluetooth HC05 sur l'appl
 Après de nombreux problèmes avec cet environnement et en s'inspirant du code crée par M.Grisolia, nous avons pu développer cette application. 
 
 Face avant 
-![APKFaceAvant](APK Bluetooth/Face_avant_application.jpg)
+![APKFaceAvant](https://github.com/MOSH-Insa-Toulouse/2020-2021_GAICH_STEPHEN_Capteur_Graphite/blob/60f94ac44989122d760d00fc086380a5088cdf57/APK%20Bluetooth/Face_avant_application.jpg)
 
 
 
