@@ -92,13 +92,13 @@ Remarque: il aurait fallu faire le diamètre des pads des connecteurs arduino pl
 
 ## Code Arduino Mesure 
 Utilisation de l'environnement Arduino IDE téléchargeable [ici](https://www.arduino.cc/en/software); version 1.8.13.
-Les librairies que nous avons utilisées sont disponibles [ici](PGM_Arduino_Mesure/Librairie)
-Nous avons développé un programme permettant de mesurer la résistance de notre capteur. Vous pouvez le retrouver [ici](PGM_Arduino_Mesure/Programme_Capteur_Mesure/Programme_Capteur_Mesure.ino)
+Les librairies que nous avons utilisées sont disponibles [ici](PGM_Arduino_Mesure/Librairie).
+Nous avons développé un programme permettant de mesurer la résistance de notre capteur. Vous pouvez le retrouver [ici](PGM_Arduino_Mesure/Programme_Capteur_Mesure/Programme_Capteur_Mesure.ino). 
 
 BLABLA Calvin 
 
 ## Application android APK
-Utilisation du site MIT App Inventor : [ici](https://appinventor.mit.edu/)
+Utilisation du site MIT App Inventor : [ici](https://appinventor.mit.edu/). 
 Nous récupérons les données envoyées par le module bluetooth HC05 sur l'application et créons un fichier pour stocker ces dernières. 
 Après de nombreux problèmes avec cet environnement et en s'inspirant du code crée par M.Grisolia, nous avons pu développer cette application. 
 
