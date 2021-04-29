@@ -1,8 +1,10 @@
 # 2020-2021 : Capteur Graphite GAICH-STEPHEN 
 2020-2021 : Projet réalisé dans le cadre de l'Unité de Formation "du capteur au banc de test" en 4ème année Génie Physique, à l'INSA de Toulouse. Au cours de ce projet, nous avons réalisé un capteur de déformation/ jauge de contrainte à base de graphite 2H. Afin de mesurer la résistance de ce type de crayon, nous avons crée un dispositif bas-coût et transportable qui fut proposé par nos enseignants. Nous avons réalisé et fabriqué un PCB shield, à l'aide du logiciel Kicad, contenant un amplificateur transimpédance (circuit analogique) , un module Bluetooth, un écran OLED et un encodeur rotatoire. Ce dernier est pluggé sur un microcontrôleur Arduino Uno programmé à l'aide du logiciel Arduino IDE et contrôlé par une application android APK bluetooth. 
 
+*** 
   - [Livrables](#livrables)
   - [PCB Shield](#pcb-shield)
+      - [Composants créés : symboles & empreintes](#composants-crees-:-symboles-&-empreintes)
   - [Code Arduino Mesure](#code-arduino-mesure)
   - [Application android APK](#application-android-apk)
   - [Protocole de test du capteur](#protocole-de-test-du-capteur)
@@ -10,13 +12,14 @@
   - [Datasheet capteur graphite](#datasheet-capteur-graphite)
   - [Problèmes rencontrés et améliorations à réaliser](#problèmes-rencontrés-et-améliorations-à-réaliser) 
 
+*** 
 ## Livrables  
 
 - [x] PCB shield 
-- [ ] Code Arduino permettant la mesure de R et le contrôle des fonctionnalités BT, OLED... 
-- [ ] Application android APK réalisé avec MIT APP INVENTOR.
-- [ ] Protocole et le programme Arduino pour le banc de test
-- [ ] Datasheet du capteur de déformation/ jauge de contrainte à base de graphite 2H 
+- [x] Code Arduino permettant la mesure de R et le contrôle des fonctionnalités BT, OLED... 
+- [x] Application android APK réalisé avec MIT APP INVENTOR.
+- [x] Protocole et le programme Arduino pour le banc de test
+- [x] Datasheet du capteur de déformation/ jauge de contrainte à base de graphite 2H 
 
 
 ## PCB Shield
@@ -89,11 +92,15 @@ Remarque: il aurait fallu faire le diamètre des pads des connecteurs arduino pl
 
 
 ## Code Arduino Mesure 
-Developpé sous Arduino IDE : mesure de la résistance du graphite en fonction de la courbure de la jauge de contrainte et contrôle du module bluetooth, de l'écran OLED et de l'encodeur rotatoire. 
-
+Utilisation de l'environnement Arduino IDE téléchargeable [ici](https://www.arduino.cc/en/software); version 1.8.13.
+Nous avons développé un programme permettant de mesurer la résistance de notre capteur. Vous pouvez le retrouver [ici](https://github.com/MOSH-Insa-Toulouse/2020-2021_GAICH_STEPHEN_Capteur_Graphite/blob/d6fd7dc08fc7b3b9c799bea2d75e389ad16dbd61/PGM_Arduino_Mesure/Programme_Capteur_Mesure/Programme_Capteur_Mesure.ino)
 
 ## Application android APK
+Utilisation du site MIT App Inventor : [ici](https://appinventor.mit.edu/)
+Nous récupérons les données envoyées par le module bluetooth HC05 sur l'application et créons un fichier pour stocker ces dernières. 
+Après de nombreux problèmes avec cet environnement et en s'inspirant du code crée par M.Grisolia, nous avons pu développer cette application. 
 
+Face avant 
 
 
 ## Protocole de test du capteur
