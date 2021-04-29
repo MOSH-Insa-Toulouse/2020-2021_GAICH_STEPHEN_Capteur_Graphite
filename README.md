@@ -4,7 +4,6 @@
 *** 
   - [Livrables](#livrables)
   - [PCB Shield](#pcb-shield)
-      - [Composants créés : symboles & empreintes](#composants-crees-:-symboles-&-empreintes)
   - [Code Arduino Mesure](#code-arduino-mesure)
   - [Application android APK](#application-android-apk)
   - [Protocole de test du capteur](#protocole-de-test-du-capteur)
@@ -93,7 +92,10 @@ Remarque: il aurait fallu faire le diamètre des pads des connecteurs arduino pl
 
 ## Code Arduino Mesure 
 Utilisation de l'environnement Arduino IDE téléchargeable [ici](https://www.arduino.cc/en/software); version 1.8.13.
-Nous avons développé un programme permettant de mesurer la résistance de notre capteur. Vous pouvez le retrouver [ici](https://github.com/MOSH-Insa-Toulouse/2020-2021_GAICH_STEPHEN_Capteur_Graphite/blob/d6fd7dc08fc7b3b9c799bea2d75e389ad16dbd61/PGM_Arduino_Mesure/Programme_Capteur_Mesure/Programme_Capteur_Mesure.ino)
+Les librairies que nous avons utilisées sont disponibles [ici](PGM_Arduino_Mesure/Librairie)
+Nous avons développé un programme permettant de mesurer la résistance de notre capteur. Vous pouvez le retrouver [ici](PGM_Arduino_Mesure/Programme_Capteur_Mesure/Programme_Capteur_Mesure.ino)
+
+BLABLA Calvin 
 
 ## Application android APK
 Utilisation du site MIT App Inventor : [ici](https://appinventor.mit.edu/)
@@ -101,9 +103,11 @@ Nous récupérons les données envoyées par le module bluetooth HC05 sur l'appl
 Après de nombreux problèmes avec cet environnement et en s'inspirant du code crée par M.Grisolia, nous avons pu développer cette application. 
 
 Face avant 
+![APKFaceAvant](APK Bluetooth/Face_avant_application.jpg)
 
 
-## Protocole de test du capteur
+
+## Protocole de test du capteur & mesures réalisées
 
 
 
@@ -112,6 +116,7 @@ Face avant
 
 
 ## Datasheet capteur graphite
+Vous pouvez retrouver la datasheet complète de notre capteur [ici](METTRE LIEN)
 
 
 ## Problèmes rencontrés et améliorations à réaliser
@@ -125,3 +130,10 @@ Face avant
 
   ![PCB_rectifié](Images/Routage_rectification_OLED.PNG)
 
+
+
+## Note des auteurs 
+Nous tenons à remercier Mme Crouzet, M.Grisolia et M.Biganzoli pour leur aide tout au long de ce projet. 
+Pour nous contacter : 
+- Eléonore Gaich : gaich@etud.insa-toulouse.fr
+- Calvin Stephen : stephen@etud.insa-toulouse.fr
