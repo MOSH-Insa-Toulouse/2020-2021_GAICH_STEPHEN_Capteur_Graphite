@@ -42,9 +42,8 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
 
 
 void setup() {
-  // put your setup code here, to run once:
   Serial.begin(9600); // Initialiser le port série
-  encoder_begin();  // Start the library
+  encoder_begin();  // Initialiser l'encodeur rotatoire
   attach_encoder(0, pin_A, pin_B);  // Attacher l'encodeur aux pins A et B
   mySerial.begin(baudrate); // Initialiser le port bluetooth
   pinMode (ENC_SW_PIN,INPUT_PULLUP); // Attacher l'intérupteur l'encodeur au pin ENC_SW_PIN
@@ -54,7 +53,6 @@ void setup() {
   display.setTextSize(1);
   display.setCursor(0, 10);
   display.display();
-
  
 }
 
