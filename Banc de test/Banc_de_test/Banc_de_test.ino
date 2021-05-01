@@ -160,7 +160,7 @@ int mesure(){
     enc_switch=digitalRead(ENC_SW_PIN);
     unsigned long currentMillis = millis ();
    if (currentMillis - previousMillis >= interval) {
-    // save the last time you blinked the LED
+
     previousMillis = currentMillis;
    float voltage = getVoltage(capteurgraphitePin);
    byte Vadc = map(analogRead(capteurgraphitePin),0,1024,0,255); // permet de coder la mesure sur 1 byte
@@ -187,7 +187,7 @@ int mesure(){
 
 // fonction qui permet de lire la valeur de la tension sur le pin 'capteurgraphite'
 float getVoltage(int pin){
-  return (analogRead(pin)*(5/1024.0)); //converting de 0 à 1023 digital range
+  return (analogRead(pin)*(5/1024.0)); //convertir de 0 à 1023 digital range
                                         // à 0 à 5 volts 
 }
 
@@ -211,11 +211,9 @@ int mainmenu(){
   }
   buildmenu(compteurmenu);
 
-  if((enc_switch_old == 1) && (enc_switch == 0)) {// 1->0 transition
+  if((enc_switch_old == 1) && (enc_switch == 0)) {
     delay(300);
     enc_switch = enc_switch_old; 
-    //Serial.write("Envoi bluetooth ici"); 
-    //mySerial.print(banc);
     return 1;
 
     }
