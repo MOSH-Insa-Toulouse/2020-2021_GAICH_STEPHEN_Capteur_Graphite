@@ -7,6 +7,8 @@
   - [Code Arduino Mesure](#code-arduino-mesure)
   - [Application android APK](#application-android-apk)
   - [Banc de test](#banc-de-test)
+  - [Code Arduino du banc de test](#code-arduino-du-banc-de-test)
+  - [Protocole de test du capteur et les résultats obtenus](#protocole-de-test-du-capteur-et-les-résultats-obtenus)
   - [Datasheet capteur graphite](#datasheet-capteur-graphite)
   - [Problèmes rencontrés et améliorations à réaliser](#problèmes-rencontrés-et-améliorations-à-réaliser) 
 
