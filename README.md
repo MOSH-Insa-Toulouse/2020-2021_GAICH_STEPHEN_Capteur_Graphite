@@ -115,7 +115,7 @@ Vous trouverez le fichier .aia [ici](APK_Bluetooth/CAPTEUR_GRAPHITE_FILE.aia) et
 
 Nous avons essayé d'améliorer cette version en faisant plusieurs screens. 
 Une page d'accueil présente ci-dessous : 
-![page-accueil](APK_Bluetooth/Page d'accueil_github.jpg)
+![page-accueil](APK_Bluetooth/Page_accueil_github.jpg)
 
 Ensuite, sur la deuxième page après avoir cliqué sur le bouton commencer l'acquisition, vous devez commencer par mesurer la résistance initiale du capteur et donner un nom au fichier de données. Tous les voyons de l'étape 1 se mettent au vert et vous pouvez voir "en direct" le tracé de la résistance relative (Rmes-Ro)/Ro au cours du temps. Les valeurs de la résistance du capteur et de la résistance relative sont aussi affichées
 
