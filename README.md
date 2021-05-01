@@ -6,8 +6,7 @@
   - [PCB Shield](#pcb-shield)
   - [Code Arduino Mesure](#code-arduino-mesure)
   - [Application android APK](#application-android-apk)
-  - [Protocole de test du capteur](#protocole-de-test-du-capteur)
-  - [Code Arduino banc de test](#code-arduino-banc-de-test)
+  - [Banc de test](#banc-de-test)
   - [Datasheet capteur graphite](#datasheet-capteur-graphite)
   - [Problèmes rencontrés et améliorations à réaliser](#problèmes-rencontrés-et-améliorations-à-réaliser) 
 
@@ -108,11 +107,39 @@ Face avant
 
 
 
-## Protocole de test du capteur & mesures réalisées
+## Banc de test 
+Nous avons réalisé deux bancs de test "low-tech". Nous avons détaillé sa construction dans la datasheet afin que toute personne possédant notre capteur puisse retrouver les résultats que nous avons obtenus [ici](METTRE LIEN) à la page 7-8. De plus, étant réalisé à base de déchets ménagers, aucun matériel de haute pointe n'est nécessaire. 
 
 
 
-## Code Arduino banc de test
+
+
+![Banc_test_dechets](Banc de test&résultats/Banc_test_dechets_divers.jpg)
+
+
+
+
+![Banc_test_carton](Banc de test&résultats/Banc_test_cartons_2.jpg)
+
+
+
+
+
+#### Protocole de test du capteur  
+Nous avons réalisé différentes expériences afin de déterminer les caractéristiques de notre capteur. 
+
+
+
+Dans un premier temps, nous avons souhaité étudier l'influence des dimensions du capteur sur la résistance initiale. De ce fait, nous avons réalisé un plan d'expérience avec un modèle linéaire sans interactions de type TRI. 
+
+
+
+#### Code Arduino 
+
+
+
+
+#### Résultats 
 
 
 
@@ -130,11 +157,17 @@ Vous pouvez retrouver la datasheet complète de notre capteur [ici](METTRE LIEN)
   Améliorations : Nouveau PCB. 
 
   ![PCB_rectifié](Images/Routage_rectification_OLED.PNG)
+  
+#### Améliorations sur la caractérisation du capteur 
+Veuillez vous référer à notre datasheet présente [ici](mettre lien) section Suggestions/Remarques. 
 
+Nous avons détaillé différentes expérimentations que nous aurions aimées mener. Par manque de temps, nous n'avons pu les mener. 
+De plus, afin de determiner concrètement les dimentions optimales du capteur, le plan d'expérience que nous avons mené devrait être complété par une étude plus approfondie (modèle de 2nd ordre) pour determiner l'optimum. Cependant, il faut pouvoir maitriser des paramètres qui ne sont pas contrôlables pour le moment (nombre de feuillets de graphite sur le capteur). 
 
 
 ## Note des auteurs 
-Nous tenons à remercier Mme Crouzet, M.Grisolia et M.Biganzoli pour leur aide tout au long de ce projet. 
+Nous tenons à remercier Mme Crouzet, M.Grisolia et M.Biganzoli pour leur aide tout au long de ce projet ainsi que M.Constancias pour l'aide lors de l'analyse des résultats obtenus sur notre DOE. 
+
 Pour nous contacter : 
 - Eléonore Gaich : gaich@etud.insa-toulouse.fr
 - Calvin Stephen : stephen@etud.insa-toulouse.fr
