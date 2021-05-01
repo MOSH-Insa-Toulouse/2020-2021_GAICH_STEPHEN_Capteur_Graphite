@@ -109,37 +109,55 @@ Face avant
 
 ## Banc de test 
 Nous avons réalisé deux bancs de test "low-tech". Nous avons détaillé sa construction dans la datasheet afin que toute personne possédant notre capteur puisse retrouver les résultats que nous avons obtenus [ici](METTRE LIEN) à la page 7-8. De plus, étant réalisé à base de déchets ménagers, aucun matériel de haute pointe n'est nécessaire. 
+Nous vous présentons donc nos deux bancs de test : 
+
+![Banc_test_dechets](github.com/MOSH-Insa-Toulouse/2020-2021_GAICH_STEPHEN_Capteur_Graphite/blob/1bbbf6c18c017310fe74cf414251e39823f5b98b/Banc%20de%20test&r%C3%A9sultats/Banc_test_dechets_divers.jpg)
+Figure : Banc de test « low-tech » n°1_ récupération de déchets divers
+
+
+![Banc_test_carton](github.com/MOSH-Insa-Toulouse/2020-2021_GAICH_STEPHEN_Capteur_Graphite/blob/a87d0e02e8e8ca06ef43198a11463cf3f4247200/Banc%20de%20test&r%C3%A9sultats/Banc_test_cartons_2.jpg)
+Figure : Banc de test « low-tech » n°2 _ carton
 
 
 
+Au début, afin de diminuer les faux contacts entre les deux pinces crocodiles, nous avions utilisé un rouleau de papier toilette que nous avions troué (voir la photo ci-dessous).
+Nous n'avons pas gardé cette méthode pour les mesures en tension et compression car les cercles créés sur le banc n'était pas à la même hauteur (amélioration possible).
+![Astucepince](github.com/MOSH-Insa-Toulouse/2020-2021_GAICH_STEPHEN_Capteur_Graphite/blob/f2989648eed4300f170cb525334238355c40d5ae/Images/Astuce%20pinces%20crocodiles.jpg)
 
-
-![Banc_test_dechets](Banc de test&résultats/Banc_test_dechets_divers.jpg)
-
-
-
-
-![Banc_test_carton](Banc de test&résultats/Banc_test_cartons_2.jpg)
-
-
-
-
-
-#### Protocole de test du capteur  
-Nous avons réalisé différentes expériences afin de déterminer les caractéristiques de notre capteur. 
-
-
-
-Dans un premier temps, nous avons souhaité étudier l'influence des dimensions du capteur sur la résistance initiale. De ce fait, nous avons réalisé un plan d'expérience avec un modèle linéaire sans interactions de type TRI. 
 
 
 
 #### Code Arduino 
+Nous avons utilisé ce programme arduino afin de déterminer les valeurs obtenues sur notre banc de test : [ici](......)
+
+
+#### Protocole de test du capteur & résultats obtenus 
+Nous avons réalisé différentes expériences afin de déterminer les caractéristiques de notre capteur. 
+
+Dans un premier temps, nous avons souhaité étudier l'influence des dimensions du capteur sur la résistance initiale. De ce fait, nous avons réalisé un plan d'expérience avec un modèle linéaire sans interactions de type TRI. Veuillez consulter ce document pour plus de détails : [ici](https://github.com/MOSH-Insa-Toulouse/2020-2021_GAICH_STEPHEN_Capteur_Graphite/blob/bd30b66165ddde75881d0ac7740d650ffe0249c1/Banc de test/Plan d'exp%C3%A9rience_meilleures_dimensions.xlsx)
+
+Nous avons pu identifier la réalité expérimentale (variables aléatoires de mesure) et tenter d’expliquer puis de maitriser au mieux les paramètres ayant un impact sur la résistance de notre capteur. Nous n’assurons pas que tous les paramètres influents furent identifiés. Elles ont aussi permis de vérifier que la résistance de notre capteur suivait la loi de Pouillet et donc la loi d’Ohm. Etant donné que nous ne sommes pas capables de déterminer le nombre de feuillets de graphite déposé lors du coloriage de notre capteur, nous allons étudier la variation relative en résistance ∆R/R_o =  (R_mes-R_o)/R_o  afin d’homogénéiser nos mesures et pouvoir les comparer.  
+
+
+
+Dans un deuxième temps, nous nous avons essayé de determiner la zone de non-destruction du capteur. Après chaque mesure sur un rayon de courbure, nous avons noté la valeur de la tension du capteur au repos (non déformé) puis avons déterminé la résistance de ce dernier. Nous l’avons ensuite comparé à celle mesurée au début de la série de mesure. 
+Document excel  [ici](https://github.com/MOSH-Insa-Toulouse/2020-2021_GAICH_STEPHEN_Capteur_Graphite/blob/7707906fa2d3f6bd2b70b1e03c5d6f7bcc5a4388/Banc de test&r%C3%A9sultats/Determination_zone_non_destruction_capteur.xlsx)
+
+
+GRAPHES 
 
 
 
 
-#### Résultats 
+
+
+Voici notre conclusion : 
+
+
+
+
+
+
 
 
 
