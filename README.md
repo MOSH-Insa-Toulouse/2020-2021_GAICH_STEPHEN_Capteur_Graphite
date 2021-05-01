@@ -76,7 +76,7 @@ Grâce à Catherine Crouzet, travaillant au Génie Physique, INSA Toulouse, nous
 
 ![Calque](Images/Calque.jpeg)
 
-Passons ensuite au perçage des trous de la plaquette à l'aide d'une perçeuse électrique (voir dossier image)
+Passons ensuite au perçage des trous de la plaquette à l'aide d'une perçeuse électrique [ici](Images/Perçeuse.jpg).
 - 0.8mm pour ceux de l'AOP, les résistances et les capacités.
 - 1mm pour ceux des connecteurs de l'Arduino et des headers des différents modules (pinces pour la feuille de graphite, bluetooth, encodeur rotatoire, écran OLED)
 
@@ -88,19 +88,22 @@ Remarque: il aurait fallu faire le diamètre des pads des connecteurs arduino pl
 
 ![Soudure](Images/PCB_soudé.png)
 
-#### 
-
+#### Détail sur le conditionneur du capteur réalisé sur le shield (électronique analogique)
+Nous avons détaillé cette partie dans la datasheet à la page 5 et 6 [ici](METTRE LIEN)
 
 
 ## Code Arduino Mesure 
 Utilisation de l'environnement Arduino IDE téléchargeable [ici](https://www.arduino.cc/en/software); version 1.8.13.
+
 Les librairies que nous avons utilisées sont disponibles [ici](PGM_Arduino_Mesure/Librairie).
+
 Nous avons développé un programme permettant de mesurer la résistance de notre capteur. Vous pouvez le retrouver [ici](PGM_Arduino_Mesure/Programme_Capteur_Mesure/Programme_Capteur_Mesure.ino). 
 
 BLABLA CALVIN
 
 ## Application android APK
 Utilisation du site MIT App Inventor : [ici](https://appinventor.mit.edu/). 
+
 Nous récupérons les données envoyées par le module bluetooth HC05 sur l'application et créons un fichier pour stocker ces dernières. 
 Après de nombreux problèmes avec cet environnement et en s'inspirant du code crée par M.Grisolia, nous avons pu développer cette application. 
 
@@ -139,13 +142,17 @@ Figure : Banc de test « low-tech » n°2 _ carton
 
 Au début, afin de diminuer les faux contacts entre les deux pinces crocodiles, nous avions utilisé un rouleau de papier toilette que nous avions troué (voir la photo ci-dessous).
 Nous n'avons pas gardé cette méthode pour les mesures en tension et compression car les cercles créés sur le banc n'était pas à la même hauteur (amélioration possible).
-![Astucepince](github.com/MOSH-Insa-Toulouse/2020-2021_GAICH_STEPHEN_Capteur_Graphite/blob/f2989648eed4300f170cb525334238355c40d5ae/Images/Astuce%20pinces%20crocodiles.jpg)
+![Astucepince](Images/Astuce_pinces_crocodiles.jpg)
 
 
 
 
 #### Code Arduino 
-Nous avons utilisé ce programme arduino afin de déterminer les valeurs obtenues sur notre banc de test : [ici](A METTRE)
+Nous avons utilisé ce programme arduino afin de déterminer les valeurs obtenues sur notre banc de test : [ici](A METTRE).
+
+Pour ce faire, nous avons du améliorer une librairie nous permettant de faire le "debouncing" sur l'encodeur rotatoire [ici](PGM_Arduino_Mesure/Librairie/Encoder_Polling_V2).
+
+DETAILS CALVIN
 
 
 #### Protocole de test du capteur & résultats obtenus 
