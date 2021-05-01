@@ -150,7 +150,7 @@ Nous n'avons pas gardé cette méthode pour les mesures en tension et compressio
 
 
 
-#### Code Arduino 
+## Code Arduino du banc de test 
 Nous avons utilisé ce programme arduino afin de déterminer les valeurs obtenues sur notre banc de test : [ici](A METTRE).
 
 Pour ce faire, nous avons du améliorer une librairie nous permettant de faire le "debouncing" sur l'encodeur rotatoire [ici](PGM_Arduino_Mesure/Librairie/Encoder_Polling_V2).
@@ -158,14 +158,17 @@ Pour ce faire, nous avons du améliorer une librairie nous permettant de faire l
 DETAILS CALVIN
 
 
-#### Protocole de test du capteur & résultats obtenus 
+## Protocole de test du capteur et les résultats obtenus 
 Nous avons réalisé différentes expériences afin de déterminer les caractéristiques de notre capteur. 
+
+#### Influence des dimensions du capteur 
 
 Dans un premier temps, nous avons souhaité étudier l'influence des dimensions du capteur sur la résistance initiale. De ce fait, nous avons réalisé un plan d'expérience avec un modèle linéaire sans interactions de type TRI. Veuillez consulter ce document pour plus de détails sur la démarche : [ici](Banc_de_test&résultats/Banc_test_recherche_meilleur_capteur.docx) et sur les résultats obtenus [ici](Banc_de_test&résultats/Plan d'expérience_meilleures_dimensions.xlsx).
 
 Nous avons pu identifier la réalité expérimentale (variables aléatoires de mesure) et tenter d’expliquer puis de maitriser au mieux les paramètres ayant un impact sur la résistance de notre capteur. Nous n’assurons pas que tous les paramètres influents furent identifiés. Elles ont aussi permis de vérifier que la résistance de notre capteur suivait la loi de Pouillet et donc la loi d’Ohm. Etant donné que nous ne sommes pas capables de déterminer le nombre de feuillets de graphite déposé lors du coloriage de notre capteur, nous allons étudier la variation relative en résistance ∆R/R_o = (R_mes-R_o)/R_o  afin d’homogénéiser nos mesures et pouvoir les comparer.  
 
 
+#### Zone de non-déterioration du capteur
 
 Dans un deuxième temps, nous nous avons essayé de determiner la zone de non-destruction du capteur. Après chaque mesure sur un rayon de courbure, nous avons noté la valeur de la tension du capteur au repos (non déformé) puis avons déterminé la résistance de ce dernier. Nous l’avons ensuite comparé à celle mesurée au début de la série de mesure. 
 Document excel  [ici](Banc_de_test&résultats/Determination_zone_non_destruction_capteur.xlsx)
@@ -183,6 +186,7 @@ Voici notre conclusion :
 ![Zone-non-destruction](Banc_de_test&résultats/Zone-non-destruction.PNG)
 
 
+#### Influence du type de crayon utilisé pour colorier le capteur
 
 Ensuite, nous avons étudie l'influence du type de crayon utilisé pour colorier notre capteur. Les crayons 3H, 2H, H, HB, B, 2B, et 3B furent testés successivement pour colorier notre capteur. Des tests de déformation, utilisant différents rayons de courbure de notre banc de test, sur ces capteurs furent réalisés pour enregistrer leur réponse. Ces informations sont reportées sur ces différentes graphiques. Pour de détails, consultez le document excel [ici](Banc_de_test&résultats/Mesure_RayonCoubure_Crayons_Papiers.xlsx). 
 
@@ -196,6 +200,8 @@ Figure n° 11 : Graphique représentant la variation relative de la résistance 
 
 En conclusion de cette étude, le capteur colorié avec un crayon 3H est le plus sensible. En effet, pour ce capteur, la variation relative de la résistance ΔR/Ro est la plus grande. Cependant, en effectuant plusieurs expériences (colorier différents capteurs avec ce crayon), nous observons une large variabilité de la réponse. Lorsque le capteur est colorié avec des crayons 2H, H, HB, B, 2B et 3B, un comportement linéaire du ce dernier est observé. La sensibilité se définit comme le rapport entre sa valeur de sortie et sa valeur d'entrée. Lorsque le capteur est soumis à un mouvement de tension et de compression, la sensibilité du capteur augmente avec la dureté du crayon utilisé. En l’occurrence, le capteur colorié avec le crayon 3H est le plus sensible et celui colorié avec le crayon 3B est le moins sensible.
 
+
+#### Influence du type de papier du capteur 
 
 Enfin, nous avons étudié l'influence de type de papier. Nous avions émis l'hypothèse que la réponse du capteur sera différente en fonction du type de papier utilisé. Quand le capteur est réalisé sur du papier normal (70g/m²), la valeur de la résistance est trop faible pour être mesurée par notre conditionneur. La valeur de la tension Vadc est en saturation (5V). Une corrélation entre l’épaisseur du papier utilisé et la réponse du capteur existe. Nous avons détaillé une possible explication à ce phénomène dans la datasheet à la page 15. [ici](METTRE LIEN)
 
@@ -219,9 +225,10 @@ Vous pouvez retrouver la datasheet complète de notre capteur [ici](METTRE LIEN)
   ![PCB_rectifié](Images/Routage_rectification_OLED.PNG)
   
 #### Améliorations sur la caractérisation du capteur 
+
 Veuillez vous référer à notre datasheet présente [ici](mettre lien) section Suggestions/Remarques. 
 
-Nous avons détaillé différentes expérimentations que nous aurions aimées mener. Par manque de temps, nous n'avons pu les mener. 
+Nous avons détaillé différentes expérimentations que nous aurions aimées mener. Par manque de temps, nous n'avons pu les faire. 
 De plus, afin de determiner concrètement les dimentions optimales du capteur, le plan d'expérience que nous avons mené devrait être complété par une étude plus approfondie (modèle de 2nd ordre) pour determiner l'optimum. Cependant, il faut pouvoir maitriser des paramètres qui ne sont pas contrôlables pour le moment (nombre de feuillets de graphite sur le capteur). 
 
 
