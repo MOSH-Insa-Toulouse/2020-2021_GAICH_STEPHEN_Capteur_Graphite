@@ -88,13 +88,16 @@ Remarque: il aurait fallu faire le diamètre des pads des connecteurs arduino pl
 
 ![Soudure](Images/PCB_soudé.png)
 
+#### 
+
+
 
 ## Code Arduino Mesure 
 Utilisation de l'environnement Arduino IDE téléchargeable [ici](https://www.arduino.cc/en/software); version 1.8.13.
 Les librairies que nous avons utilisées sont disponibles [ici](PGM_Arduino_Mesure/Librairie).
 Nous avons développé un programme permettant de mesurer la résistance de notre capteur. Vous pouvez le retrouver [ici](PGM_Arduino_Mesure/Programme_Capteur_Mesure/Programme_Capteur_Mesure.ino). 
 
-BLABLA Calvin 
+BLABLA CALVIN
 
 ## Application android APK
 Utilisation du site MIT App Inventor : [ici](https://appinventor.mit.edu/). 
@@ -106,16 +109,30 @@ Face avant
 ![APKFaceAvant](https://github.com/MOSH-Insa-Toulouse/2020-2021_GAICH_STEPHEN_Capteur_Graphite/blob/60f94ac44989122d760d00fc086380a5088cdf57/APK%20Bluetooth/Face_avant_application.jpg)
 
 
+Une connexion avec le bluetooth HC05 est nécessaire. Après qu'elle soit faite, vous pourrez suivre la variation de la tension lue par l'APK "en direct". La valeur de la résistance du capteur est aussi calculée et affichée en bas de l'écran. Enfin, un fichier contenant toutes les données récupérées par le bluetooth est créé dans vos documents. 
+
+Vous trouverez le fichier .aia [ici](APK_Bluetooth/CAPTEUR_GRAPHITE_FILE.aia) et le fichier .apk [ici](APK_Bluetooth/CAPTEUR_GRAPHITE_FILE.apk)
+
+Nous avons essayé d'améliorer cette version en faisant plusieurs screens. 
+Une page d'accueil présente ci-dessous : 
+![page-accueil](APK_Bluetooth/Page_accueil_github.jpg)
+
+Ensuite, sur la deuxième page après avoir cliqué sur le bouton commencer l'acquisition, vous devez commencer par mesurer la résistance initiale du capteur et donner un nom au fichier de données. Tous les voyons de l'étape 1 se mettent au vert et vous pouvez voir "en direct" le tracé de la résistance relative (Rmes-Ro)/Ro au cours du temps. Les valeurs de la résistance du capteur et de la résistance relative sont aussi affichées
+
+![Page-acquisition](A METTRE) 
+
+
+Vous trouverez le fichier .aia [ici](A METTRE) et le fichier .apk [ici](A METTRE)
 
 ## Banc de test 
 Nous avons réalisé deux bancs de test "low-tech". Nous avons détaillé sa construction dans la datasheet afin que toute personne possédant notre capteur puisse retrouver les résultats que nous avons obtenus [ici](METTRE LIEN) à la page 7-8. De plus, étant réalisé à base de déchets ménagers, aucun matériel de haute pointe n'est nécessaire. 
 Nous vous présentons donc nos deux bancs de test : 
 
-![Banc_test_dechets](github.com/MOSH-Insa-Toulouse/2020-2021_GAICH_STEPHEN_Capteur_Graphite/blob/1bbbf6c18c017310fe74cf414251e39823f5b98b/Banc%20de%20test&r%C3%A9sultats/Banc_test_dechets_divers.jpg)
+![Banc_test_dechets](Banc_de_test&résultats/Banc_test_dechets_divers.jpg)
 Figure : Banc de test « low-tech » n°1_ récupération de déchets divers
 
 
-![Banc_test_carton](github.com/MOSH-Insa-Toulouse/2020-2021_GAICH_STEPHEN_Capteur_Graphite/blob/a87d0e02e8e8ca06ef43198a11463cf3f4247200/Banc%20de%20test&r%C3%A9sultats/Banc_test_cartons_2.jpg)
+![Banc_test_carton](Banc_de_test&résultats/Banc_test_cartons_2.jpg)
 Figure : Banc de test « low-tech » n°2 _ carton
 
 
@@ -128,37 +145,50 @@ Nous n'avons pas gardé cette méthode pour les mesures en tension et compressio
 
 
 #### Code Arduino 
-Nous avons utilisé ce programme arduino afin de déterminer les valeurs obtenues sur notre banc de test : [ici](......)
+Nous avons utilisé ce programme arduino afin de déterminer les valeurs obtenues sur notre banc de test : [ici](A METTRE)
 
 
 #### Protocole de test du capteur & résultats obtenus 
 Nous avons réalisé différentes expériences afin de déterminer les caractéristiques de notre capteur. 
 
-Dans un premier temps, nous avons souhaité étudier l'influence des dimensions du capteur sur la résistance initiale. De ce fait, nous avons réalisé un plan d'expérience avec un modèle linéaire sans interactions de type TRI. Veuillez consulter ce document pour plus de détails : [ici](https://github.com/MOSH-Insa-Toulouse/2020-2021_GAICH_STEPHEN_Capteur_Graphite/blob/bd30b66165ddde75881d0ac7740d650ffe0249c1/Banc de test/Plan d'exp%C3%A9rience_meilleures_dimensions.xlsx)
+Dans un premier temps, nous avons souhaité étudier l'influence des dimensions du capteur sur la résistance initiale. De ce fait, nous avons réalisé un plan d'expérience avec un modèle linéaire sans interactions de type TRI. Veuillez consulter ce document pour plus de détails sur la démarche : [ici](Banc_de_test&résultats/Banc_test_recherche_meilleur_capteur.docx) et sur les résultats obtenus [ici](Banc_de_test&résultats/Plan d'expérience_meilleures_dimensions.xlsx).
 
-Nous avons pu identifier la réalité expérimentale (variables aléatoires de mesure) et tenter d’expliquer puis de maitriser au mieux les paramètres ayant un impact sur la résistance de notre capteur. Nous n’assurons pas que tous les paramètres influents furent identifiés. Elles ont aussi permis de vérifier que la résistance de notre capteur suivait la loi de Pouillet et donc la loi d’Ohm. Etant donné que nous ne sommes pas capables de déterminer le nombre de feuillets de graphite déposé lors du coloriage de notre capteur, nous allons étudier la variation relative en résistance ∆R/R_o =  (R_mes-R_o)/R_o  afin d’homogénéiser nos mesures et pouvoir les comparer.  
+Nous avons pu identifier la réalité expérimentale (variables aléatoires de mesure) et tenter d’expliquer puis de maitriser au mieux les paramètres ayant un impact sur la résistance de notre capteur. Nous n’assurons pas que tous les paramètres influents furent identifiés. Elles ont aussi permis de vérifier que la résistance de notre capteur suivait la loi de Pouillet et donc la loi d’Ohm. Etant donné que nous ne sommes pas capables de déterminer le nombre de feuillets de graphite déposé lors du coloriage de notre capteur, nous allons étudier la variation relative en résistance ∆R/R_o = (R_mes-R_o)/R_o  afin d’homogénéiser nos mesures et pouvoir les comparer.  
 
 
 
 Dans un deuxième temps, nous nous avons essayé de determiner la zone de non-destruction du capteur. Après chaque mesure sur un rayon de courbure, nous avons noté la valeur de la tension du capteur au repos (non déformé) puis avons déterminé la résistance de ce dernier. Nous l’avons ensuite comparé à celle mesurée au début de la série de mesure. 
-Document excel  [ici](https://github.com/MOSH-Insa-Toulouse/2020-2021_GAICH_STEPHEN_Capteur_Graphite/blob/7707906fa2d3f6bd2b70b1e03c5d6f7bcc5a4388/Banc de test&r%C3%A9sultats/Determination_zone_non_destruction_capteur.xlsx)
+Document excel  [ici](Banc_de_test&résultats/Determination_zone_non_destruction_capteur.xlsx)
 
 
 GRAPHES 
 
 
 
-
+METTRE LEGENDE EN LES AJOUTANT
 
 
 Voici notre conclusion : 
 
+![Zone-non-destruction](Banc_de_test&résultats/Zone-non-destruction.PNG)
 
 
 
+Ensuite, nous avons étudie l'influence du type de crayon utilisé pour colorier notre capteur. Les crayons 3H, 2H, H, HB, B, 2B, et 3B furent testés successivement pour colorier notre capteur. Des tests de déformation, utilisant différents rayons de courbure de notre banc de test, sur ces capteurs furent réalisés pour enregistrer leur réponse. Ces informations sont reportées sur ces différentes graphiques. Pour de détails, consultez le document excel [ici](Banc_de_test&résultats/Mesure_RayonCoubure_Crayons_Papiers.xlsx). 
+
+![Mesure_crayons_tension](Banc_de_test&résultats/Graphe_variation_relative_deformation_tension_crayons.png)
+Figure n° 10 : Graphique représentant la variation relative de la résistance en fonction de la déformation en tension du capteur et du type de crayon présent sur le capteur
+
+![Mesure_crayons_compression](Banc_de_test&résultats/Graphe_variation_relative_deformation_compression_crayons.png)
+Figure n° 11 : Graphique représentant la variation relative de la résistance en fonction de la déformation en compression du capteur et du type de crayon présent sur le capteur
+
+En conclusion de cette étude, le capteur colorié avec un crayon 3H est le plus sensible. En effet, pour ce capteur, la variation relative de la résistance ΔR/Ro est la plus grande. Cependant, en effectuant plusieurs expériences (colorier différents capteurs avec ce crayon), nous observons une large variabilité de la réponse. Lorsque le capteur est colorié avec des crayons 2H, H, HB, B, 2B et 3B, un comportement linéaire du ce dernier est observé. La sensibilité se définit comme le rapport entre sa valeur de sortie et sa valeur d'entrée. Lorsque le capteur est soumis à un mouvement de tension et de compression, la sensibilité du capteur augmente avec la dureté du crayon utilisé. En l’occurrence, le capteur colorié avec le crayon 3H est le plus sensible et celui colorié avec le crayon 3B est le moins sensible.
 
 
+Enfin, nous avons étudié l'influence de type de papier. Nous avions émis l'hypothèse que la réponse du capteur sera différente en fonction du type de papier utilisé. Quand le capteur est réalisé sur du papier normal (70g/m²), la valeur de la résistance est trop faible pour être mesurée par notre conditionneur. La valeur de la tension Vadc est en saturation (5V). Une corrélation entre l’épaisseur du papier utilisé et la réponse du capteur existe. Nous avons détaillé une possible explication à ce phénomène dans la datasheet à la page 15. [ici](METTRE LIEN)
 
+
+Pour pallier ce problème, le papier fut renforcé en enveloppant le capteur avec du ruban d’adhésif sans couvrir les pads du capteur pour la prise du contact avec les pinces crocodiles. Vous trouverez les résultats obtenus dans le fichier excel [ici](Banc_de_test&résultats/Influence_scotch.xlsx). En effectuant plusieurs tests sur le capteur, une tendance d'augmentation de la résistance st observée lorsque nous diminuons le rayon de courbure. Cependant, nous pouvons observer une augmentation initiale de la résistance entre un capteur scotché et un capteur sans ruban adhésif. Nous n’avons pas observé une amélioration de la zone de non-destruction. Dans certains cas, nous observons même une dégradation de la zone de non-destruction. Nous avons détaillé une possible explication à ce phénomène dans la datasheet à la page 15. [ici](METTRE LIEN)
 
 
 ## Datasheet capteur graphite
@@ -184,7 +214,7 @@ De plus, afin de determiner concrètement les dimentions optimales du capteur, l
 
 
 ## Note des auteurs 
-Nous tenons à remercier Mme Crouzet, M.Grisolia et M.Biganzoli pour leur aide tout au long de ce projet ainsi que M.Constancias pour l'aide lors de l'analyse des résultats obtenus sur notre DOE. 
+Nous tenons à remercier Mme Crouzet, M.Grisolia et M.Biganzoli pour leur aide tout au long de ce projet ainsi que M.Constancias pour son aide lors de l'analyse des résultats obtenus sur notre DOE. 
 
 Pour nous contacter : 
 - Eléonore Gaich : gaich@etud.insa-toulouse.fr
