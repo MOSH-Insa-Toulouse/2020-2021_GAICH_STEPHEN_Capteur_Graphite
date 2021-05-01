@@ -17,7 +17,7 @@
 - [x] Code Arduino permettant la mesure de R et le contrôle des fonctionnalités BT, OLED... 
 - [x] Application android APK réalisé avec MIT APP INVENTOR.
 - [x] Protocole et le programme Arduino pour le banc de test
-- [x] Datasheet du capteur de déformation/ jauge de contrainte à base de graphite 2H 
+- [x] Datasheet du capteur de déformation/ jauge de contrainte 
 
 
 ## PCB Shield
