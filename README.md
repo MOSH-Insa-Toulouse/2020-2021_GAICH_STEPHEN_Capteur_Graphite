@@ -132,16 +132,19 @@ Nous avons réalisé deux bancs de test "low-tech". Nous avons détaillé sa con
 Nous vous présentons donc nos deux bancs de test : 
 
 ![Banc_test_dechets](Banc_de_test&résultats/Banc_test_dechets_divers.jpg)
+
 Figure : Banc de test « low-tech » n°1_ récupération de déchets divers
 
 
 ![Banc_test_carton](Banc_de_test&résultats/Banc_test_cartons_2.jpg)
+
 Figure : Banc de test « low-tech » n°2 _ carton
 
 
 
 Au début, afin de diminuer les faux contacts entre les deux pinces crocodiles, nous avions utilisé un rouleau de papier toilette que nous avions troué (voir la photo ci-dessous).
 Nous n'avons pas gardé cette méthode pour les mesures en tension et compression car les cercles créés sur le banc n'était pas à la même hauteur (amélioration possible).
+
 ![Astucepince](Images/Astuce_pinces_crocodiles.jpg)
 
 
@@ -184,9 +187,11 @@ Voici notre conclusion :
 Ensuite, nous avons étudie l'influence du type de crayon utilisé pour colorier notre capteur. Les crayons 3H, 2H, H, HB, B, 2B, et 3B furent testés successivement pour colorier notre capteur. Des tests de déformation, utilisant différents rayons de courbure de notre banc de test, sur ces capteurs furent réalisés pour enregistrer leur réponse. Ces informations sont reportées sur ces différentes graphiques. Pour de détails, consultez le document excel [ici](Banc_de_test&résultats/Mesure_RayonCoubure_Crayons_Papiers.xlsx). 
 
 ![Mesure_crayons_tension](Banc_de_test&résultats/Graphe_variation_relative_deformation_tension_crayons.png)
+
 Figure n° 10 : Graphique représentant la variation relative de la résistance en fonction de la déformation en tension du capteur et du type de crayon présent sur le capteur
 
 ![Mesure_crayons_compression](Banc_de_test&résultats/Graphe_variation_relative_deformation_compression_crayons.png)
+
 Figure n° 11 : Graphique représentant la variation relative de la résistance en fonction de la déformation en compression du capteur et du type de crayon présent sur le capteur
 
 En conclusion de cette étude, le capteur colorié avec un crayon 3H est le plus sensible. En effet, pour ce capteur, la variation relative de la résistance ΔR/Ro est la plus grande. Cependant, en effectuant plusieurs expériences (colorier différents capteurs avec ce crayon), nous observons une large variabilité de la réponse. Lorsque le capteur est colorié avec des crayons 2H, H, HB, B, 2B et 3B, un comportement linéaire du ce dernier est observé. La sensibilité se définit comme le rapport entre sa valeur de sortie et sa valeur d'entrée. Lorsque le capteur est soumis à un mouvement de tension et de compression, la sensibilité du capteur augmente avec la dureté du crayon utilisé. En l’occurrence, le capteur colorié avec le crayon 3H est le plus sensible et celui colorié avec le crayon 3B est le moins sensible.
