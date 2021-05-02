@@ -91,7 +91,7 @@ Remarque: il aurait fallu faire le diamètre des pads des connecteurs arduino pl
 ![Soudure](Images/PCB_soudé.png)
 
 #### Détail sur le conditionneur du capteur réalisé sur le shield (électronique analogique)
-Nous avons détaillé cette partie dans la datasheet à la page 5 et 6 [ici](Datasheet/Plan Datasheet.docx)
+Nous avons détaillé cette partie dans la datasheet à la page 5 et 6 [ici](Datasheet/Datasheet_jauge_contrainte_GPINSA2021-2494-5215.pdf)
 
 
 ## Code Arduino Mesure 
@@ -100,7 +100,7 @@ Utilisation de l'environnement Arduino IDE téléchargeable [ici](https://www.ar
 Les librairies que nous avons utilisées sont disponibles [ici](PGM_Arduino_Mesure/Librairie).
 
 Nous avons développé un programme permettant de mesurer la résistance de notre capteur. Vous pouvez le retrouver [ici](PGM_Arduino_Mesure/Programme_Capteur_Mesure/Programme_Capteur_Mesure.ino). 
-Il s'agit d'un programme basique qui lira la valeur de la tension sur le pin 1 nommé comme "capteurgraphite". Cette acquisition est cadencée à 1s. La valeur lu est ensuite mappé sur 1 byte (0 à 255) car nous avons choisi d'envoyer un chiffre d'un byte sur le bluetooth et l'APK recevrai un chiffre d'un byte à chaque tour de boucle. Cette valeur est également affiché sur le port série.
+Il s'agit d'un programme basique qui lira la valeur de la tension sur le pin A0 nommé comme "capteurgraphite". Cette acquisition est cadencée à 1s. La valeur lue est ensuite mappée sur 1 byte (0 à 255) car nous avons choisi d'envoyer un chiffre d'un byte sur le bluetooth. L'APK recevra un chiffre d'un byte à chaque tour de boucle. Cette valeur est également affichée sur le port série.
 
 ## Application android APK
 Utilisation du site MIT App Inventor : [ici](https://appinventor.mit.edu/). 
@@ -113,7 +113,7 @@ Face avant
 ![APKFaceAvant](https://github.com/MOSH-Insa-Toulouse/2020-2021_GAICH_STEPHEN_Capteur_Graphite/blob/60f94ac44989122d760d00fc086380a5088cdf57/APK%20Bluetooth/Face_avant_application.jpg)
 
 
-Une connexion avec le bluetooth HC05 est nécessaire. Après qu'elle soit faite, vous pourrez suivre la variation de la tension lue par l'APK "en direct". La valeur de la résistance du capteur est aussi calculée et affichée en bas de l'écran. Enfin, un fichier contenant toutes les données récupérées par le bluetooth est créé dans vos documents. 
+Une connexion avec le bluetooth HC05 est nécessaire. Puis, vous pourrez suivre la variation de la tension lue par l'APK "en direct". La valeur de la résistance du capteur est aussi calculée et affichée en bas de l'écran. Enfin, un fichier contenant toutes les données récupérées par le bluetooth est créé dans vos documents. 
 
 Vous trouverez le fichier .aia [ici](APK_Bluetooth/CAPTEUR_GRAPHITE_FILE.aia) et le fichier .apk [ici](APK_Bluetooth/CAPTEUR_GRAPHITE_FILE.apk)
 
@@ -121,7 +121,7 @@ Nous avons essayé d'améliorer cette version en faisant plusieurs screens.
 Une page d'accueil présente ci-dessous : 
 ![page-accueil](APK_Bluetooth/Page_accueil_github.jpg)
 
-Ensuite, sur la deuxième page après avoir cliqué sur le bouton commencer l'acquisition, vous devez commencer par mesurer la résistance initiale du capteur et donner un nom au fichier de données. Tous les voyons de l'étape 1 se mettent au vert et vous pouvez voir "en direct" le tracé de la résistance relative (Rmes-Ro)/Ro au cours du temps. Les valeurs de la résistance du capteur et de la résistance relative sont aussi affichées
+Ensuite, sur la deuxième page après avoir cliqué sur le bouton commencer l'acquisition, vous devez commencer par mesurer la résistance initiale du capteur et donner un nom au fichier de données. Lorsque tous les voyants de l'étape 1 se mettent au vert, vous pouvez voir "en direct" le tracé de la résistance relative (Rmes-Ro)/Ro au cours du temps. Les valeurs de la résistance du capteur et de la résistance relative sont aussi affichées.
 
 ![Page-acquisition](A METTRE) 
 
@@ -129,9 +129,9 @@ Ensuite, sur la deuxième page après avoir cliqué sur le bouton commencer l'ac
 Vous trouverez le fichier .aia [ici](APK_Bluetooth/Application_Capteur_amelioree.aia) et le fichier .apk [ici](A METTRE)
 
 ## Banc de test 
-Nous avons réalisé deux bancs de test "low-tech". Nous avons détaillé sa construction dans la datasheet afin que toute personne possédant notre capteur puisse retrouver les résultats que nous avons obtenus [ici](Datasheet/Plan Datasheet.docx) à la page 7-8. De plus, étant réalisé à base de déchets ménagers, aucun matériel de haute pointe n'est nécessaire. 
+Nous avons réalisé deux bancs de test "low-tech". Nous avons détaillé sa construction dans la datasheet afin que toute personne possédant notre capteur puisse retrouver les résultats que nous avons obtenus [ici](Datasheet/Datasheet_jauge_contrainte_GPINSA2021-2494-5215.pdf) à la page 7-8. De plus, étant réalisé à base de déchets ménagers, aucun matériel de haute technologie n'est nécessaire. 
 
-Nous vous présentons donc nos deux bancs de test : 
+Nous vous présentons nos deux bancs de test : 
 
 ![Banc_test_dechets](Banc_de_test&résultats/Banc_test_dechets_divers.jpg)
 
@@ -153,11 +153,11 @@ Nous n'avons pas gardé cette méthode pour les mesures en tension et compressio
 
 
 ## Code Arduino du banc de test 
-Nous avons utilisé ce programme arduino afin de déterminer les valeurs obtenues sur notre banc de test : [ici](Banc de test/Banc_de_test/Banc_de_test.ino).
+Nous avons développé ce programme arduino afin de déterminer les valeurs obtenues en utilisant notre banc de test : [ici](PGM_Banc_de_test/PGM_Banc_de_test.ino).
 
 Pour ce faire, nous avons du améliorer une librairie nous permettant de faire le "debouncing" sur l'encodeur rotatoire [ici](PGM_Arduino_Mesure/Librairie/Encoder_Polling_V2).
 
-Ce code intégre l'encodeur rotatoire et l'OLED. Ayant plusiers banc de tests, nous avons construit un menu pour donner l'option à l'utilisateur de choisir le type de banc de test souhaité en utilisant l'encodeur rotatoire et le boutton poussoir sur l'encodeur rotatoire. Une fois le type de banc de test choisi, le programme envoi le type de banc de test choisi à l'APK sous forme de string. Dans le fichier des données sur le portable, chaque acquisition commence donc par le type de banc de test. Une fois cette étape terminé, l'OLED affiche "le bluetooth est- il connecté" à l'utilisateur pour que l'utilisateur confirme que la connection a été établie. L'utilisateur doit appuyer sur "Oui". Ensuite, l'OLED affiche "Etes-vous prêts". L'utilisateur appuie sur "Oui" une fois prêt et l'acquisition commence. La valeur de la tension Vadc est affiché sur l'OLED et est envoyé à l'APK via le bluetooth. Quand l'utilisateur souhaite arrêter l'acquistion, il suffit d'appuyer sur le bouton 'STOP'. L'acquisition est alors arrêtée et l'OLED affiche de nouveau le menu principal.
+Notre nouveau programme gère aussi l'encodeur rotatoire et l'écran OLED. Ayant plusieurs banc de tests, nous avons programmé un menu sur l'écran OLED permettant à l'utilisateur de choisir le type de banc de test souhaité. Le boutton poussoir de l'encodeur rotatoire permet de selectionner ce dernier. Une fois le type de banc de test choisi, le programme envoie le type de banc de test à l'APK sous forme de "string" (texte). Dans le fichier des données enregistré sur le téléphone portable, chaque acquisition commence par des informations sur l'acquisition (banc de test, clock, forme des données reçues etc). Une fois cette étape terminée, l'OLED affiche la question "le bluetooth est- il connecté ?". L'utilisateur doit confirmer que la connexion a été établie en appuyant sur "Oui". Ensuite, il affiche "Etes-vous prêts ?" . L'utilisateur appuie de nouveau sur "Oui" une fois prêt. L'acquisition commence. La valeur de la tension Vadc est affichée sur l'OLED et est envoyée à l'APK via le bluetooth. Quand l'utilisateur souhaite arrêter l'acquistion, il doit appuyer sur le bouton 'STOP'. L'acquisition est alors arrêtée et l'OLED affiche de nouveau le menu principal.
 
 
 ## Protocole de test du capteur et les résultats obtenus 
@@ -195,7 +195,7 @@ Voici notre conclusion :
 
 #### Influence du type de crayon utilisé pour colorier le capteur
 
-Ensuite, nous avons étudie l'influence du type de crayon utilisé pour colorier notre capteur. Les crayons 3H, 2H, H, HB, B, 2B, et 3B furent testés successivement pour colorier notre capteur. Des tests de déformation, utilisant différents rayons de courbure de notre banc de test, sur ces capteurs furent réalisés pour enregistrer leur réponse. Ces informations sont reportées sur ces différentes graphiques. Pour de détails, consultez le document excel [ici](Banc_de_test&résultats/Mesure_RayonCoubure_Crayons_Papiers.xlsx). 
+Ensuite, nous avons étudie l'influence du type de crayon utilisé pour colorier notre capteur. Les crayons 3H, 2H, H, HB, B, 2B, et 3B furent testés successivement pour colorier notre capteur. Des tests de déformation, utilisant différents rayons de courbure de notre banc de test, sur ces capteurs furent réalisés. Ces informations sont présentes sur ces différents graphiques. Pour de détails, consultez le document excel [ici](Banc_de_test&résultats/Mesure_RayonCoubure_Crayons_Papiers.xlsx). 
 
 ![Mesure_crayons_tension](Banc_de_test&résultats/Graphe_variation_relative_deformation_tension_crayons.png)
 
@@ -210,14 +210,14 @@ En conclusion de cette étude, le capteur colorié avec un crayon 3H est le plus
 
 #### Influence du type de papier du capteur 
 
-Enfin, nous avons étudié l'influence de type de papier. Nous avions émis l'hypothèse que la réponse du capteur sera différente en fonction du type de papier utilisé. Quand le capteur est réalisé sur du papier normal (70g/m²), la valeur de la résistance est trop faible pour être mesurée par notre conditionneur. La valeur de la tension Vadc est en saturation (5V). Une corrélation entre l’épaisseur du papier utilisé et la réponse du capteur existe. Nous avons détaillé une possible explication à ce phénomène dans la datasheet à la page 15. [ici](Datasheet/Plan Datasheet.docx)
+Enfin, nous avons étudié l'influence de type de papier. Nous avions émis l'hypothèse que la réponse du capteur serait différente en fonction du type de papier utilisé. Quand le capteur est réalisé sur du papier normal (70g/m²), la valeur de la résistance est trop faible pour être mesurée par notre conditionneur. La valeur de la tension Vadc est en saturation (5V). Une corrélation entre l’épaisseur du papier utilisé et la réponse du capteur existe. Nous avons détaillé une possible explication à ce phénomène dans la datasheet à la page 15. [ici](Datasheet/Datasheet_jauge_contrainte_GPINSA2021-2494-5215.pdf)
 
 
-Pour pallier ce problème, le papier fut renforcé en enveloppant le capteur avec du ruban d’adhésif sans couvrir les pads du capteur pour la prise du contact avec les pinces crocodiles. Vous trouverez les résultats obtenus dans le fichier excel [ici](Banc_de_test&résultats/Influence_scotch.xlsx). En effectuant plusieurs tests sur le capteur, une tendance d'augmentation de la résistance st observée lorsque nous diminuons le rayon de courbure. Cependant, nous pouvons observer une augmentation initiale de la résistance entre un capteur scotché et un capteur sans ruban adhésif. Nous n’avons pas observé une amélioration de la zone de non-destruction. Dans certains cas, nous observons même une dégradation de la zone de non-destruction. Nous avons détaillé une possible explication à ce phénomène dans la datasheet à la page 15. [ici](Datasheet/Plan Datasheet.docx)
+Pour pallier ce problème, le papier fut renforcé en enveloppant le capteur avec du ruban d’adhésif sans couvrir les pads du capteur pour la prise du contact avec les pinces crocodiles. Vous trouverez les résultats obtenus dans le fichier excel [ici](Banc_de_test&résultats/Influence_scotch.xlsx). En effectuant plusieurs tests sur le capteur, une tendance d'augmentation de la résistance est observée lorsque nous diminuons le rayon de courbure. Cependant, nous pouvons observer une augmentation initiale de la résistance entre un capteur scotché et un capteur sans ruban adhésif. Nous n’avons pas observé une amélioration de la zone de non-destruction. Dans certains cas, nous observons même une dégradation de cette dernière. Nous avons détaillé une possible explication à ce phénomène dans la datasheet à la page 15. [ici](Datasheet/Datasheet_jauge_contrainte_GPINSA2021-2494-5215.pdf)
 
 
 ## Datasheet capteur graphite
-Vous pouvez retrouver la datasheet complète de notre capteur [ici](Datasheet/Plan Datasheet.docx)
+Vous pouvez retrouver la datasheet complète de notre capteur [ici](Datasheet/Datasheet_jauge_contrainte_GPINSA2021-2494-5215.pdf)
 
 
 ## Problèmes rencontrés et améliorations à réaliser
@@ -225,7 +225,7 @@ Vous pouvez retrouver la datasheet complète de notre capteur [ici](Datasheet/Pl
 #### Problèmes sur le PCB
 
 - Pads pour les connecteurs arduino trop fins.
-- Mauvais placement de l'empreinte OLED : En testant l'écran OLED avec un programme fourni dans les libraires arduino, nous nous sommes rendus compte que, par inattention, nous avions mal placé l'empreinte (rotation 180°) car nous souhaitions que l'écran OLED soit positionné vers l'extérieur (cf PCB 3D). Afin d'avoir les bonnes pins, ce dernier doit être placé à l'intérieur. Or il y a l'encodeur rotatoire. Pour palier à ce problème, nous allons utiliser la platine d'expérimentation. 
+- Mauvais placement de l'empreinte OLED : En testant l'écran OLED avec un programme fourni dans les libraires arduino, nous nous sommes rendus compte que, par inattention, nous avions mal placé l'empreinte (rotation 180°) car nous souhaitions que l'écran OLED soit positionné vers l'extérieur (cf PCB 3D). Afin d'avoir les bonnes pins, ce dernier doit être placé à l'intérieur. Or il y a l'encodeur rotatoire. Pour palier à ce problème, nous allons utiliser la platine d'expérimentation ou des fils males/femelle. 
 
   Améliorations : Nouveau PCB. 
 
@@ -233,7 +233,7 @@ Vous pouvez retrouver la datasheet complète de notre capteur [ici](Datasheet/Pl
   
 #### Améliorations sur la caractérisation du capteur 
 
-Veuillez vous référer à notre datasheet présente [ici](Datasheet/Plan Datasheet.docx) section Suggestions/Remarques. 
+Veuillez vous référer à notre datasheet présente [ici](Datasheet/Datasheet_jauge_contrainte_GPINSA2021-2494-5215.pdf) section Suggestions/Remarques. 
 
 Nous avons détaillé différentes expérimentations que nous aurions aimées mener. Par manque de temps, nous n'avons pu les faire. 
 De plus, afin de determiner concrètement les dimentions optimales du capteur, le plan d'expérience que nous avons mené devrait être complété par une étude plus approfondie (modèle de 2nd ordre) pour determiner l'optimum. Cependant, il faut pouvoir maitriser des paramètres qui ne sont pas contrôlables pour le moment (nombre de feuillets de graphite sur le capteur). 
