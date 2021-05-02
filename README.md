@@ -91,7 +91,7 @@ Remarque: il aurait fallu faire le diamètre des pads des connecteurs arduino pl
 ![Soudure](Images/PCB_soudé.png)
 
 #### Détail sur le conditionneur du capteur réalisé sur le shield (électronique analogique)
-Nous avons détaillé cette partie dans la datasheet à la page 5 et 6 [ici](Datasheet/Plan Datasheet.DOCX)
+Nous avons détaillé cette partie dans la datasheet à la page 5 et 6 [ici](Datasheet/Plan Datasheet.docx)
 
 
 ## Code Arduino Mesure 
@@ -126,10 +126,11 @@ Ensuite, sur la deuxième page après avoir cliqué sur le bouton commencer l'ac
 ![Page-acquisition](A METTRE) 
 
 
-Vous trouverez le fichier .aia [ici](A METTRE) et le fichier .apk [ici](A METTRE)
+Vous trouverez le fichier .aia [ici](APK_Bluetooth/Application_Capteur_amelioree.aia) et le fichier .apk [ici](A METTRE)
 
 ## Banc de test 
-Nous avons réalisé deux bancs de test "low-tech". Nous avons détaillé sa construction dans la datasheet afin que toute personne possédant notre capteur puisse retrouver les résultats que nous avons obtenus [ici](METTRE LIEN) à la page 7-8. De plus, étant réalisé à base de déchets ménagers, aucun matériel de haute pointe n'est nécessaire. 
+Nous avons réalisé deux bancs de test "low-tech". Nous avons détaillé sa construction dans la datasheet afin que toute personne possédant notre capteur puisse retrouver les résultats que nous avons obtenus [ici](Datasheet/Plan Datasheet.docx) à la page 7-8. De plus, étant réalisé à base de déchets ménagers, aucun matériel de haute pointe n'est nécessaire. 
+
 Nous vous présentons donc nos deux bancs de test : 
 
 ![Banc_test_dechets](Banc_de_test&résultats/Banc_test_dechets_divers.jpg)
