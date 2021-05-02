@@ -100,8 +100,7 @@ Utilisation de l'environnement Arduino IDE téléchargeable [ici](https://www.ar
 Les librairies que nous avons utilisées sont disponibles [ici](PGM_Arduino_Mesure/Librairie).
 
 Nous avons développé un programme permettant de mesurer la résistance de notre capteur. Vous pouvez le retrouver [ici](PGM_Arduino_Mesure/Programme_Capteur_Mesure/Programme_Capteur_Mesure.ino). 
-
-BLABLA CALVIN
+Il s'agit d'un programme basique qui lira la valeur de la tension sur le pin 1 nommé comme "capteurgraphite". Cette acquisition est cadencée à 1s. La valeur lu est ensuite mappé sur 1 byte (0 à 255) car nous avons choisi d'envoyer un chiffre d'un byte sur le bluetooth et l'APK recevrai un chiffre d'un byte à chaque tour de boucle. Cette valeur est également affiché sur le port série.
 
 ## Application android APK
 Utilisation du site MIT App Inventor : [ici](https://appinventor.mit.edu/). 
@@ -157,7 +156,7 @@ Nous avons utilisé ce programme arduino afin de déterminer les valeurs obtenue
 
 Pour ce faire, nous avons du améliorer une librairie nous permettant de faire le "debouncing" sur l'encodeur rotatoire [ici](PGM_Arduino_Mesure/Librairie/Encoder_Polling_V2).
 
-DETAILS CALVIN
+Ce code intégre l'encodeur rotatoire et l'OLED. Ayant plusiers banc de tests, nous avons construit un menu pour donner l'option à l'utilisateur de choisir le type de banc de test souhaité en utilisant l'encodeur rotatoire et le boutton poussoir sur l'encodeur rotatoire. Une fois le type de banc de test choisi, le programme envoi le type de banc de test choisi à l'APK sous forme de string. Dans le fichier des données sur le portable, chaque acquisition commence donc par le type de banc de test. Une fois cette étape terminé, l'OLED affiche "le bluetooth est- il connecté" à l'utilisateur pour que l'utilisateur confirme que la connection a été établie. L'utilisateur doit appuyer sur "Oui". Ensuite, l'OLED affiche "Etes-vous prêts". L'utilisateur appuie sur "Oui" une fois prêt et l'acquisition commence. La valeur de la tension Vadc est affiché sur l'OLED et est envoyé à l'APK via le bluetooth. Quand l'utilisateur souhaite arrêter l'acquistion, il suffit d'appuyer sur le bouton 'STOP'. L'acquisition est alors arrêtée et l'OLED affiche de nouveau le menu principal.
 
 
 ## Protocole de test du capteur et les résultats obtenus 
