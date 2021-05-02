@@ -91,7 +91,7 @@ Remarque: il aurait fallu faire le diamètre des pads des connecteurs arduino pl
 ![Soudure](Images/PCB_soudé.png)
 
 #### Détail sur le conditionneur du capteur réalisé sur le shield (électronique analogique)
-Nous avons détaillé cette partie dans la datasheet à la page 5 et 6 [ici](METTRE LIEN)
+Nous avons détaillé cette partie dans la datasheet à la page 5 et 6 [ici](Datasheet/Plan Datasheet.docx)
 
 
 ## Code Arduino Mesure 
@@ -209,10 +209,10 @@ En conclusion de cette étude, le capteur colorié avec un crayon 3H est le plus
 
 #### Influence du type de papier du capteur 
 
-Enfin, nous avons étudié l'influence de type de papier. Nous avions émis l'hypothèse que la réponse du capteur sera différente en fonction du type de papier utilisé. Quand le capteur est réalisé sur du papier normal (70g/m²), la valeur de la résistance est trop faible pour être mesurée par notre conditionneur. La valeur de la tension Vadc est en saturation (5V). Une corrélation entre l’épaisseur du papier utilisé et la réponse du capteur existe. Nous avons détaillé une possible explication à ce phénomène dans la datasheet à la page 15. [ici](METTRE LIEN)
+Enfin, nous avons étudié l'influence de type de papier. Nous avions émis l'hypothèse que la réponse du capteur sera différente en fonction du type de papier utilisé. Quand le capteur est réalisé sur du papier normal (70g/m²), la valeur de la résistance est trop faible pour être mesurée par notre conditionneur. La valeur de la tension Vadc est en saturation (5V). Une corrélation entre l’épaisseur du papier utilisé et la réponse du capteur existe. Nous avons détaillé une possible explication à ce phénomène dans la datasheet à la page 15. [ici](Datasheet/Plan Datasheet.docx)
 
 
-Pour pallier ce problème, le papier fut renforcé en enveloppant le capteur avec du ruban d’adhésif sans couvrir les pads du capteur pour la prise du contact avec les pinces crocodiles. Vous trouverez les résultats obtenus dans le fichier excel [ici](Banc_de_test&résultats/Influence_scotch.xlsx). En effectuant plusieurs tests sur le capteur, une tendance d'augmentation de la résistance st observée lorsque nous diminuons le rayon de courbure. Cependant, nous pouvons observer une augmentation initiale de la résistance entre un capteur scotché et un capteur sans ruban adhésif. Nous n’avons pas observé une amélioration de la zone de non-destruction. Dans certains cas, nous observons même une dégradation de la zone de non-destruction. Nous avons détaillé une possible explication à ce phénomène dans la datasheet à la page 15. [ici](METTRE LIEN)
+Pour pallier ce problème, le papier fut renforcé en enveloppant le capteur avec du ruban d’adhésif sans couvrir les pads du capteur pour la prise du contact avec les pinces crocodiles. Vous trouverez les résultats obtenus dans le fichier excel [ici](Banc_de_test&résultats/Influence_scotch.xlsx). En effectuant plusieurs tests sur le capteur, une tendance d'augmentation de la résistance st observée lorsque nous diminuons le rayon de courbure. Cependant, nous pouvons observer une augmentation initiale de la résistance entre un capteur scotché et un capteur sans ruban adhésif. Nous n’avons pas observé une amélioration de la zone de non-destruction. Dans certains cas, nous observons même une dégradation de la zone de non-destruction. Nous avons détaillé une possible explication à ce phénomène dans la datasheet à la page 15. [ici](Datasheet/Plan Datasheet.docx)
 
 
 ## Datasheet capteur graphite
