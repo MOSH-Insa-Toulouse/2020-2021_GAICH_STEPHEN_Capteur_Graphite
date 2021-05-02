@@ -152,7 +152,7 @@ Nous n'avons pas gardé cette méthode pour les mesures en tension et compressio
 
 
 ## Code Arduino du banc de test 
-Nous avons utilisé ce programme arduino afin de déterminer les valeurs obtenues sur notre banc de test : [ici](A METTRE).
+Nous avons utilisé ce programme arduino afin de déterminer les valeurs obtenues sur notre banc de test : [ici](A METTRE).(Banc de test/Banc_de_test/Banc_de_test.ino)
 
 Pour ce faire, nous avons du améliorer une librairie nous permettant de faire le "debouncing" sur l'encodeur rotatoire [ici](PGM_Arduino_Mesure/Librairie/Encoder_Polling_V2).
 
