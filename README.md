@@ -79,7 +79,7 @@ Grâce à Catherine Crouzet, travaillant au Génie Physique, INSA Toulouse, nous
 ![Calque](Images/Calque.jpeg)
 
 Passons ensuite au perçage des trous de la plaquette à l'aide d'une perçeuse électrique [ici](Images/Perçeuse.jpg).
-- 0.8mm pour ceux de l'AOP, les résistances et les capacités.
+- 0.8mm pour ceux de l'AOP, des résistances et des capacités.
 - 1mm pour ceux des connecteurs de l'Arduino et des headers des différents modules (pinces pour la feuille de graphite, bluetooth, encodeur rotatoire, écran OLED)
 
 ![Perçage](Images/PCB_Perçé.png)
