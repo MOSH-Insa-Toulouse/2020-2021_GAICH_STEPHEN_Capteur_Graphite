@@ -100,8 +100,7 @@ Utilisation de l'environnement Arduino IDE téléchargeable [ici](https://www.ar
 Les librairies que nous avons utilisées sont disponibles [ici](PGM_Arduino_Mesure/Librairie).
 
 Nous avons développé un programme permettant de mesurer la résistance de notre capteur. Vous pouvez le retrouver [ici](PGM_Arduino_Mesure/Programme_Capteur_Mesure/Programme_Capteur_Mesure.ino). 
-
-BLABLA CALVIN
+Il s'agit d'un programme basique qui lira la valeur de la tension sur le pin 1 nommé comme "capteurgraphite". Cette acquisition est cadencée à 1s. La valeur lu est ensuite mappé sur 1 byte (0 à 255) car nous avons choisi d'envoyer un chiffre d'un byte sur le bluetooth et l'APK recevrai un chiffre d'un byte à chaque tour de boucle. Cette valeur est également affiché sur le port série.
 
 ## Application android APK
 Utilisation du site MIT App Inventor : [ici](https://appinventor.mit.edu/). 
@@ -153,11 +152,11 @@ Nous n'avons pas gardé cette méthode pour les mesures en tension et compressio
 
 
 ## Code Arduino du banc de test 
-Nous avons utilisé ce programme arduino afin de déterminer les valeurs obtenues sur notre banc de test : [ici](A METTRE).
+Nous avons utilisé ce programme arduino afin de déterminer les valeurs obtenues sur notre banc de test : [ici](Banc de test/Banc_de_test/Banc_de_test.ino).
 
 Pour ce faire, nous avons du améliorer une librairie nous permettant de faire le "debouncing" sur l'encodeur rotatoire [ici](PGM_Arduino_Mesure/Librairie/Encoder_Polling_V2).
 
-DETAILS CALVIN
+Ce code intégre l'encodeur rotatoire et l'OLED. Ayant plusiers banc de tests, nous avons construit un menu pour donner l'option à l'utilisateur de choisir le type de banc de test souhaité en utilisant l'encodeur rotatoire et le boutton poussoir sur l'encodeur rotatoire. Une fois le type de banc de test choisi, le programme envoi le type de banc de test choisi à l'APK sous forme de string. Dans le fichier des données sur le portable, chaque acquisition commence donc par le type de banc de test. Une fois cette étape terminé, l'OLED affiche "le bluetooth est- il connecté" à l'utilisateur pour que l'utilisateur confirme que la connection a été établie. L'utilisateur doit appuyer sur "Oui". Ensuite, l'OLED affiche "Etes-vous prêts". L'utilisateur appuie sur "Oui" une fois prêt et l'acquisition commence. La valeur de la tension Vadc est affiché sur l'OLED et est envoyé à l'APK via le bluetooth. Quand l'utilisateur souhaite arrêter l'acquistion, il suffit d'appuyer sur le bouton 'STOP'. L'acquisition est alors arrêtée et l'OLED affiche de nouveau le menu principal.
 
 
 ## Protocole de test du capteur et les résultats obtenus 
@@ -176,11 +175,16 @@ Dans un deuxième temps, nous nous avons essayé de determiner la zone de non-de
 Document excel  [ici](Banc_de_test&résultats/Determination_zone_non_destruction_capteur.xlsx)
 
 
-GRAPHES 
+![Zone-non-destruction_tension](Banc_de_test&résultats/Graphe_determination_zone_non_destruction_tension.PNG)
+
+Figure : |Vadc_après_chaque_mesure - Vadc_initiale| après chaque déformation pour le capteur en tension
 
 
 
-METTRE LEGENDE EN LES AJOUTANT
+![Zone-non-destruction_tension](Banc_de_test&résultats/Graphe_determination_zone_non_destruction_compression.PNG)
+
+Figure : |Vadc_après_chaque_mesure - Vadc_initiale| après chaque déformation pour le capteur en compression
+
 
 
 Voici notre conclusion : 
@@ -212,7 +216,7 @@ Pour pallier ce problème, le papier fut renforcé en enveloppant le capteur ave
 
 
 ## Datasheet capteur graphite
-Vous pouvez retrouver la datasheet complète de notre capteur [ici](METTRE LIEN)
+Vous pouvez retrouver la datasheet complète de notre capteur [ici](Datasheet/Plan Datasheet.docx)
 
 
 ## Problèmes rencontrés et améliorations à réaliser
@@ -228,7 +232,7 @@ Vous pouvez retrouver la datasheet complète de notre capteur [ici](METTRE LIEN)
   
 #### Améliorations sur la caractérisation du capteur 
 
-Veuillez vous référer à notre datasheet présente [ici](mettre lien) section Suggestions/Remarques. 
+Veuillez vous référer à notre datasheet présente [ici](Datasheet/Plan Datasheet.docx) section Suggestions/Remarques. 
 
 Nous avons détaillé différentes expérimentations que nous aurions aimées mener. Par manque de temps, nous n'avons pu les faire. 
 De plus, afin de determiner concrètement les dimentions optimales du capteur, le plan d'expérience que nous avons mené devrait être complété par une étude plus approfondie (modèle de 2nd ordre) pour determiner l'optimum. Cependant, il faut pouvoir maitriser des paramètres qui ne sont pas contrôlables pour le moment (nombre de feuillets de graphite sur le capteur). 
