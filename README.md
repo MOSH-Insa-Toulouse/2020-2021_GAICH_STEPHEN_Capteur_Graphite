@@ -91,7 +91,7 @@ Remarque: il aurait fallu faire le diamètre des pads des connecteurs arduino pl
 ![Soudure](Images/PCB_soudé.png)
 
 #### Détail sur le conditionneur du capteur réalisé sur le shield (électronique analogique)
-Nous avons détaillé cette partie dans la datasheet à la page 5 et 6 [ici](Datasheet/Plan Datasheet.docx)
+Nous avons détaillé cette partie dans la datasheet à la page 5 et 6 [ici](Datasheet/Plan Datasheet.DOCX)
 
 
 ## Code Arduino Mesure 
