@@ -175,11 +175,16 @@ Dans un deuxième temps, nous nous avons essayé de determiner la zone de non-de
 Document excel  [ici](Banc_de_test&résultats/Determination_zone_non_destruction_capteur.xlsx)
 
 
-GRAPHES 
+![Zone-non-destruction_tension](Banc_de_test&résultats/Graphe_determination_zone_non_destruction_tension.PNG)
+
+Figure : |Vadc_après_chaque_mesure - Vadc_initiale| après chaque déformation pour le capteur en tension
 
 
 
-METTRE LEGENDE EN LES AJOUTANT
+![Zone-non-destruction_tension](Banc_de_test&résultats/Graphe_determination_zone_non_destruction_compression.PNG)
+
+Figure : |Vadc_après_chaque_mesure - Vadc_initiale| après chaque déformation pour le capteur en compression
+
 
 
 Voici notre conclusion : 
