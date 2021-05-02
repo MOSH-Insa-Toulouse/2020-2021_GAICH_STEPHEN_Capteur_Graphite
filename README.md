@@ -152,7 +152,7 @@ Nous n'avons pas gardé cette méthode pour les mesures en tension et compressio
 
 
 ## Code Arduino du banc de test 
-Nous avons utilisé ce programme arduino afin de déterminer les valeurs obtenues sur notre banc de test : [ici](A METTRE).(Banc de test/Banc_de_test/Banc_de_test.ino)
+Nous avons utilisé ce programme arduino afin de déterminer les valeurs obtenues sur notre banc de test : [ici](Banc de test/Banc_de_test/Banc_de_test.ino).
 
 Pour ce faire, nous avons du améliorer une librairie nous permettant de faire le "debouncing" sur l'encodeur rotatoire [ici](PGM_Arduino_Mesure/Librairie/Encoder_Polling_V2).
 
@@ -211,7 +211,7 @@ Pour pallier ce problème, le papier fut renforcé en enveloppant le capteur ave
 
 
 ## Datasheet capteur graphite
-Vous pouvez retrouver la datasheet complète de notre capteur [ici](METTRE LIEN)
+Vous pouvez retrouver la datasheet complète de notre capteur [ici](Datasheet/Plan Datasheet.docx)
 
 
 ## Problèmes rencontrés et améliorations à réaliser
@@ -227,7 +227,7 @@ Vous pouvez retrouver la datasheet complète de notre capteur [ici](METTRE LIEN)
   
 #### Améliorations sur la caractérisation du capteur 
 
-Veuillez vous référer à notre datasheet présente [ici](mettre lien) section Suggestions/Remarques. 
+Veuillez vous référer à notre datasheet présente [ici](Datasheet/Plan Datasheet.docx) section Suggestions/Remarques. 
 
 Nous avons détaillé différentes expérimentations que nous aurions aimées mener. Par manque de temps, nous n'avons pu les faire. 
 De plus, afin de determiner concrètement les dimentions optimales du capteur, le plan d'expérience que nous avons mené devrait être complété par une étude plus approfondie (modèle de 2nd ordre) pour determiner l'optimum. Cependant, il faut pouvoir maitriser des paramètres qui ne sont pas contrôlables pour le moment (nombre de feuillets de graphite sur le capteur). 
