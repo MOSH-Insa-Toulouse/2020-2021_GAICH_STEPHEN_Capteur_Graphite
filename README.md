@@ -126,7 +126,7 @@ Ensuite, sur la deuxième page après avoir cliqué sur le bouton "commencer l'a
 ![Page-acquisition](APK_Bluetooth/Application_amelioree_screen2.jpg) 
 
 
-Vous trouverez le fichier .aia [ici](APK_Bluetooth/Application_Capteur_amelioree.aia) et le fichier .apk [ici](A METTRE)
+Vous trouverez le fichier .aia [ici](APK_Bluetooth/Application_Capteur_amelioree.aia) et le fichier .apk [ici](APK_Bluetooth/Application_Capteur_amelioree.apk)
 
 Plusieurs améliorations peuvent être réalisées. Nous les détaillerons dans la partie "Problèmes rencontrés et améliorations à réaliser".
 
