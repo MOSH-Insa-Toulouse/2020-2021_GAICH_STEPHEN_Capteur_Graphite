@@ -121,12 +121,14 @@ Nous avons essayé d'améliorer cette version en faisant plusieurs screens.
 Une page d'accueil présente ci-dessous : 
 ![page-accueil](APK_Bluetooth/Page_accueil_github.jpg)
 
-Ensuite, sur la deuxième page après avoir cliqué sur le bouton commencer l'acquisition, vous devez commencer par mesurer la résistance initiale du capteur et donner un nom au fichier de données. Lorsque tous les voyants de l'étape 1 se mettent au vert, vous pouvez voir "en direct" le tracé de la résistance relative (Rmes-Ro)/Ro au cours du temps. Les valeurs de la résistance du capteur et de la résistance relative sont aussi affichées.
+Ensuite, sur la deuxième page après avoir cliqué sur le bouton "commencer l'acquisition", vous devez réaliser la mesure de la résistance initiale du capteur. Lorsque tous les voyants de l'étape 1 se mettent au vert, vous pouvez voir le tracé de la variation de la tension Vadc en fonction du temps au cours du temps. Les valeurs de la résistance du capteur et de la résistance relative sont aussi affichées.
 
 ![Page-acquisition](A METTRE) 
 
 
 Vous trouverez le fichier .aia [ici](APK_Bluetooth/Application_Capteur_amelioree.aia) et le fichier .apk [ici](A METTRE)
+
+Plusieurs améliorations peuvent être réalisées. Nous les détaillerons dans la partie "Problèmes rencontrés et améliorations à réaliser".
 
 ## Banc de test 
 Nous avons réalisé deux bancs de test "low-tech". Nous avons détaillé sa construction dans la datasheet afin que toute personne possédant notre capteur puisse retrouver les résultats que nous avons obtenus [ici](Datasheet/Datasheet_jauge_contrainte_GPINSA2021-2494-5215.pdf) à la page 7-8. De plus, étant réalisé à base de déchets ménagers, aucun matériel de haute technologie n'est nécessaire. 
@@ -231,6 +233,10 @@ Vous pouvez retrouver la datasheet complète de notre capteur [ici](Datasheet/Da
 
   ![PCB_rectifié](Images/Routage_rectification_OLED.PNG)
   
+#### Amélioration de l'application APK : Application capteur améliorée 
+Après de multiples essais, nous n'avons pas réussi à afficher correctement la variation (dR-Ro)/Ro. Nous ne comprenons pas l'erreur commise. 
+De plus, il faudrait optimiser le code pour que le traçage sur le canvas et les calculs de résistance se fassent en "temps réel". Nous avons un temps de décalage assez important. 
+  
 #### Améliorations sur la caractérisation du capteur 
 
 Veuillez vous référer à notre datasheet présente [ici](Datasheet/Datasheet_jauge_contrainte_GPINSA2021-2494-5215.pdf) section Suggestions/Remarques. 
@@ -238,6 +244,7 @@ Veuillez vous référer à notre datasheet présente [ici](Datasheet/Datasheet_j
 Nous avons détaillé différentes expérimentations que nous aurions aimées mener. Par manque de temps, nous n'avons pu les faire. 
 De plus, afin de determiner concrètement les dimentions optimales du capteur, le plan d'expérience que nous avons mené devrait être complété par une étude plus approfondie (modèle de 2nd ordre) pour determiner l'optimum. Cependant, il faut pouvoir maitriser des paramètres qui ne sont pas contrôlables pour le moment (nombre de feuillets de graphite sur le capteur). 
 
+***
 
 ## Note des auteurs 
 Nous tenons à remercier Mme Crouzet, M.Grisolia et M.Biganzoli pour leur aide tout au long de ce projet ainsi que M.Constancias pour son aide lors de l'analyse des résultats obtenus sur notre DOE. 
