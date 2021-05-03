@@ -119,11 +119,11 @@ Vous trouverez le fichier .aia [ici](APK_Bluetooth/CAPTEUR_GRAPHITE_FILE.aia) et
 
 Nous avons essayé d'améliorer cette version en faisant plusieurs screens. 
 Une page d'accueil présente ci-dessous : 
-![page-accueil](APK_Bluetooth/Page_accueil_github.jpg)
+![page-accueil](APK_Bluetooth/Application_amelioree_screen1.jpg)
 
 Ensuite, sur la deuxième page après avoir cliqué sur le bouton "commencer l'acquisition", vous devez réaliser la mesure de la résistance initiale du capteur. Lorsque tous les voyants de l'étape 1 se mettent au vert, vous pouvez voir le tracé de la variation de la tension Vadc en fonction du temps au cours du temps. Les valeurs de la résistance du capteur et de la résistance relative sont aussi affichées.
 
-![Page-acquisition](A METTRE) 
+![Page-acquisition](APK_Bluetooth/Application_amelioree_screen2.jpg) 
 
 
 Vous trouverez le fichier .aia [ici](APK_Bluetooth/Application_Capteur_amelioree.aia) et le fichier .apk [ici](A METTRE)
