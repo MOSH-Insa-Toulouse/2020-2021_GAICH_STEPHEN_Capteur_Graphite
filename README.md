@@ -201,11 +201,11 @@ Ensuite, nous avons étudie l'influence du type de crayon utilisé pour colorier
 
 ![Mesure_crayons_tension](Banc_de_test&résultats/Graphe_variation_relative_deformation_tension_crayons.png)
 
-Figure n° 10 : Graphique représentant la variation relative de la résistance en fonction de la déformation en tension du capteur et du type de crayon présent sur le capteur
+Figure : Graphique représentant la variation relative de la résistance en fonction de la déformation en tension du capteur et du type de crayon présent sur le capteur
 
 ![Mesure_crayons_compression](Banc_de_test&résultats/Graphe_variation_relative_deformation_compression_crayons.png)
 
-Figure n° 11 : Graphique représentant la variation relative de la résistance en fonction de la déformation en compression du capteur et du type de crayon présent sur le capteur
+Figure : Graphique représentant la variation relative de la résistance en fonction de la déformation en compression du capteur et du type de crayon présent sur le capteur
 
 En conclusion de cette étude, le capteur colorié avec un crayon 3H est le plus sensible. En effet, pour ce capteur, la variation relative de la résistance ΔR/Ro est la plus grande. Cependant, en effectuant plusieurs expériences (colorier différents capteurs avec ce crayon), nous observons une large variabilité de la réponse. Lorsque le capteur est colorié avec des crayons 2H, H, HB, B, 2B et 3B, un comportement linéaire du ce dernier est observé. La sensibilité se définit comme le rapport entre sa valeur de sortie et sa valeur d'entrée. Lorsque le capteur est soumis à un mouvement de tension et de compression, la sensibilité du capteur augmente avec la dureté du crayon utilisé. En l’occurrence, le capteur colorié avec le crayon 3H est le plus sensible et celui colorié avec le crayon 3B est le moins sensible.
 
